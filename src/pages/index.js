@@ -1,3 +1,15 @@
 import React from "react"
+import Navbar from '../components/navbar'
 
-export default () => <div>Hello world!</div>
+
+const Index = () =>{
+    return (
+
+        <div>
+            <Navbar />
+
+        </div>
+    )
+} 
+
+export default Index
