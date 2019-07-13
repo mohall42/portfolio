@@ -1,7 +1,7 @@
 import React from "react"
 import Navbar from '../components/navbar'
-import {grapql, StaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import indexStyled from './index.module.scss'
+import Ocean from '../images/ocean.jpg'
 
 export const onClientEntry = () => {  
     // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
@@ -12,33 +12,21 @@ export const onClientEntry = () => {
   }
 
 
-const Index = () =>{
+const sectionStyles = {
+  backgroundSize: "cover",
+  backgroundImage: `url(${Ocean})`
+};
 
+class Index extends React.Component{
 
-  const BackgroundSelection = ({className}) =>(
-    <StaticQuery query={grapql`
-    
-      query {
-        fileName: file(relativePath: { eq: "images/ocean.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxHeight: 4160) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `
-    } 
-    render={data => {
-      const imageData = data.
-    }}
-    return (
+  render(){
+    return(
+      <body className={indexStyled.body}>
+      <Navbar />
 
-        <div>
-            <Navbar />
-
-        </div>
+      </body>
     )
-} 
+  }
+}
 
 export default Index

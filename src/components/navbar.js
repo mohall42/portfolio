@@ -12,7 +12,7 @@ const NavBar = () => {
     return(
            <div >
                <ul className= {navBarstyle.nav}>
-                   <li><Link to = {"/"}><img src={logo}></img></Link></li>
+                   <li ><Link to = {"/"}><img className= {navBarstyle.icon} src={logo}></img></Link></li>
                    <li></li>
                </ul>
 
