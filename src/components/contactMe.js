@@ -1,10 +1,31 @@
 import React from 'react'
-import DribbbleLogo from '../images/dribble.png'
+import contactStyles from './contact.module.scss'
+import DribbbleLogo from '../images/dribbble.png'
+import GitHubLogo from '../images/github.png'
+import EmailLogo from '../images/email.png'
 
-const Contact () => {
+const Contact = () => {
     return(
 
-        <h1>Get in touch with me</h1>
+        <div>
+            <h1>Get in touch with me</h1>
+            <ul className ={contactStyles.symbols}>
+                <li>
+                    <a href= "https://dribbble.com/"><img src = {DribbbleLogo} alt=" "></img></a>
+                </li>
+                
+                <li>
+                    <a href = "/"><img src = {GitHubLogo} alt=" "></img></a>
+                </li>
+                
+                <li>
+                    <a href = "/"><img src = {EmailLogo} alt=" "></img></a>
+                </li>
+                
+            </ul>
+        </div>
+
+        
 
     )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import Navbar from '../components/navbar'
 import indexStyled from './index.module.scss'
-import Ocean from '../images/ocean.jpg'
+import Contact from '../components/contactMe'
 
 export const onClientEntry = () => {  
     // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
@@ -12,10 +12,6 @@ export const onClientEntry = () => {
   }
 
 
-const sectionStyles = {
-  backgroundSize: "cover",
-  backgroundImage: `url(${Ocean})`
-};
 
 class Index extends React.Component{
 
@@ -23,7 +19,13 @@ class Index extends React.Component{
     return(
       <body className={indexStyled.body}>
       <Navbar />
+      <div>
+        <content></content>
+      </div>
+      <div>
 
+        <Contact />
+      </div>
       </body>
     )
   }
