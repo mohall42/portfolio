@@ -1,11 +1,19 @@
-.symbols li{
+.flexbox{
     list-style: none;
-    display: inline-flex;
-   
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 5%;   
     
 }
-.symbols{
-    display: flex;
-    align-content: center;
 
+.symbol{
+    height: 50px;
+    width: 50px;
+   
+}
+
+.h1{
+    text-align: center;
+    color: white;
+    /* font-family: ;  Change this later, dont forget */ 
 }

@@ -7,22 +7,18 @@ import EmailLogo from '../images/email.png'
 const Contact = () => {
     return(
 
-        <div>
-            <h1>Get in touch with me</h1>
-            <ul className ={contactStyles.symbols}>
-                <li>
-                    <a href= "https://dribbble.com/"><img src = {DribbbleLogo} alt=" "></img></a>
-                </li>
+        <div className={contactStyles.container}>
+            <h1 className={contactStyles.h1}>Get in touch with me</h1>
+            <div className ={contactStyles.flexbox}>
                 
-                <li>
-                    <a href = "/"><img src = {GitHubLogo} alt=" "></img></a>
-                </li>
+                <a  href= "https://dribbble.com/"><img className={contactStyles.symbol} src = {DribbbleLogo} alt=" "></img></a>
+            
+                <a  href = "/"><img className={contactStyles.symbol} src = {GitHubLogo} alt=" "></img></a>
+            
+                <a href = "/"><img className={contactStyles.symbol}  src = {EmailLogo} alt=" "></img></a>
+            
                 
-                <li>
-                    <a href = "/"><img src = {EmailLogo} alt=" "></img></a>
-                </li>
-                
-            </ul>
+            </div>
         </div>
 
         

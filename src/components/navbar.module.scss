@@ -1,17 +1,34 @@
+ 
+    /* min-width 1025px, large screens */
 
-.nav{
-    list-style: none;
-    width: 100%;
-    margin: 0 0 3em 0;
-    padding: 0;
+    .container{
+        display: block;
+    }
 
-}
+    
+    .icon{
+    
+        margin-top: 2%;
+        margin-left: 5%;
 
-.nav li{
-    float: left;
-}
+    }
 
-.icon{
-    box-shadow: 5px, 10px #888888;
-    margin-left: 10%;
-}
+
+
+
+    @media only screen and (max-width: 600px){ 
+
+        .icon{
+
+           display: block;
+            margin-top: 4%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 65%;
+            width: 65%;
+        
+        }
+    
+    
+    } /* Define mobile styles */
+    

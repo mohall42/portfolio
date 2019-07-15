@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link } from 'gatsby'
-import logo from '../images/logo.png'
+import logo from '../images/logo.svg'
 import navBarstyle from './navbar.module.scss'
 
 
@@ -10,10 +10,10 @@ const NavBar = () => {
 
     return(
            <div >
-               <ul className= {navBarstyle.nav}>
-                   <li ><Link to = {"/"}><img className= {navBarstyle.icon} src={logo} alt = 'Michael Hall'></img></Link></li>
-                   <li></li>
-               </ul>
+               <div className= {navBarstyle.container}>
+                    <Link to = {"/"}><img className= {navBarstyle.icon} src={logo} alt = 'Michael Hall'></img></Link>
+                   
+               </div>
 
            </div>
         )
