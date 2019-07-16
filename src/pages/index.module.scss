@@ -4,3 +4,24 @@ body, html{
     background: url(../images/ocean.jpg);
     background-size: auto;
 }
+
+.header h1 , h2{
+
+    font-size: 2em;
+    text-align: center;
+    color: white;
+
+}
+
+p{
+    color: white;
+}
+
+@media only screen and (max-width: 600px){ 
+
+    h1, h2{
+
+        font-size: 1em;
+    }
+
+}
