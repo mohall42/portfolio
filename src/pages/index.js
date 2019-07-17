@@ -4,7 +4,10 @@ import indexStyled from './index.module.scss'
 import Contact from '../components/contactMe'
 import About from '../components/about'
 import Header from '../components/header'
-import Zoom from 'react-reveal/Zoom'
+
+import rec2 from '../images/rec2.svg'
+
+
 
 
 
@@ -15,11 +18,15 @@ const Index = () => {
     return(
       
       <div className={indexStyled.body}>
+       
         <Navbar />
-        <Zoom>
+        
 
+       
+        
+ 
           <Header />
-        </Zoom>
+        
          
         <About />
 
