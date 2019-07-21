@@ -5,31 +5,3 @@ body, html{
     background-size: auto;
 }
 
-/* Rectangle 2 */
-.rectangel{
- position: absolute;   
- z-index: -1;
-}
-
-
-/* Rectangle 2.1 */
-/* .rectangle2{
-
-    position: absolute;
-    width: 100vw;
-    height: 64px;
-    left: -62.12px;
-    top: 1225.92px;
-    
-    background: #C4C4C4;
-    transform: rotate(-26.91deg);
-} */
-
-@media only screen and (max-width: 600px){ 
-
-    h1, h2{
-
-        font-size: 1em;
-    }
-
-}

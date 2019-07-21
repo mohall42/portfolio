@@ -1,22 +1,57 @@
 import React from 'react'
 import {Link } from 'gatsby'
 import logo from '../images/logo.svg'
-import navBarstyle from './navbar.module.scss'
-import rec1 from '../images/rec1.svg'
+import styled from 'styled-components'
+import Flash from 'react-reveal/Flash'
 
 
+
+const Container = styled.div`
+    display: block;
+
+`;
+
+const Icon = styled.img` 
+    src: url(${props => props.src})
+
+    display: block;
+    margin-top: 3%;
+    margin-left: 5%;
+
+
+@media only screen and (max-width: 600px){ 
+
+       display: block;
+        margin-top: 4%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 65%;
+        width: 65%;
+ 
+} 
+`;
 
 const NavBar = () => {
  
 
     return(
-           <div >
-               <div className= {navBarstyle.container}>
-                    <Link to = {"/"}><img className= {navBarstyle.icon} src={logo} alt = 'Michael Hall'></img></Link>
-                    <img  src={rec1} alt=''></img>
-               </div>
+          
+              <Container>
+                 
+                    <Link to = {"/"}>
 
-           </div>
+                        <Flash>
+
+                        <Icon  src={logo} alt = 'Michael Hall'></Icon>
+                        </Flash>
+
+                        
+                        
+                    </Link>
+                   
+              </Container>
+             
+           
         )
 }
 
