@@ -1,20 +1,13 @@
 import React from 'react'
 import Bounce from 'react-reveal/Bounce'
+import Slide from 'react-reveal/Slide'
+import Jump from 'react-reveal/Jump'
 import styled from "styled-components"
 import arrow from '../images/arrow.svg'
 
 const Head = styled.section `
 
     display: block;
-
-    h1, h2 {
-        
-        
-        font-size: 2em;
-        text-align: center;
-        color: white;
-    }
-    
     box-sizing: border-box;
     width: 100%;
     height: 90vh;
@@ -25,8 +18,36 @@ const Head = styled.section `
 
 `;
 
+const Banner = styled.div`
+    
+background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    width: 100%;
+    height: 60%;
+    transform: skew(0deg) rotate(0deg);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%; 
+    transform: translate(-50%, -50%);
+
+
+
+`;
+
 const Content = styled.div ` 
 
+    h1, h2 {
+            
+            
+        font-size: 2em;
+        text-align: center;
+        color: white;
+    }
     margin: 0;
     position: absolute;
     top: 50%;
@@ -38,25 +59,19 @@ const Content = styled.div `
 
 const Arrow = styled.img` 
 
-src: url(${props => props.src})
+    
+    src: url(${props => props.src});
+    width: 7%;
+    height: 7%;
+    transform: rotate(90deg);
+    display: block;
+    margin-left: 50%;
+    margin-right: 50%;
+    fill: green;
 
-fill: white;
-rotate: 90deg;
-
+    
 `;
 
-
-const CcSkew = styled.div` 
-
-    width:100%
-    height:100px;
-    position:absolute;
-    left:0px;
-    background:linear-gradient(to right bottom, #823A9C 49%, #fff 50%),    
-    linear-gradient(-50deg, #ffffff 16px, #000 0);
-
-
-`;
 
 
 const Header = () => {
@@ -64,19 +79,29 @@ const Header = () => {
     return (
 
         <Head>
-            
+            <Slide>
 
-            <CcSkew/>
-
-            <Content>
-                <Bounce bottom delay={2500}>
-
-                    <h1>Software Developer</h1>
-                    <h2>CompSci grad with a passion for buiding for the Web</h2>
-                    <Arrow alt=' ' src={arrow}></Arrow>
-                </Bounce>
-
-            </Content>
+            <Banner> 
+              
+              
+              <Content>
+                
+  
+                      <Bounce bottom delay={2500}>
+  
+                          <h1>Software Developer</h1>
+                          <h2>CompSci grad with a passion for buiding for the Web</h2>
+                           <Jump count= '10'> 
+  
+                              <Arrow  alt=' ' src={arrow}></Arrow>
+                          </Jump> 
+                      </Bounce>
+                  
+  
+              </Content>
+            </ Banner >
+            </Slide>
+        
         
         </Head> 
     )
