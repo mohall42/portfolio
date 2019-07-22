@@ -13,21 +13,17 @@ const Head = styled.section `
     height: 90vh;
     
 
-    
-    
-
 `;
 
 const Banner = styled.div`
     
-background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #434343;  /* fallback for old browsers */
+
 
 
     width: 100%;
-    height: 60%;
-    transform: skew(0deg) rotate(0deg);
+    height: 50%;
+    transform: skew(20deg) rotate(15deg);
     margin: 0;
     position: absolute;
     top: 50%;
@@ -65,8 +61,6 @@ const Arrow = styled.img`
     height: 7%;
     transform: rotate(90deg);
     display: block;
-    margin-left: 50%;
-    margin-right: 50%;
     fill: green;
 
     
@@ -93,7 +87,7 @@ const Header = () => {
                           <h2>CompSci grad with a passion for buiding for the Web</h2>
                            <Jump count= '10'> 
   
-                              <Arrow  alt=' ' src={arrow}></Arrow>
+                              <Arrow  alt='' src={arrow}></Arrow>
                           </Jump> 
                       </Bounce>
                   
