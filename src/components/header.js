@@ -17,19 +17,18 @@ const Head = styled.section `
 
 const Banner = styled.div`
     
-background: #434343;  /* fallback for old browsers */
+    background: #434343;  /* fallback for old browsers */
 
-
-
-    width: 100%;
+    width: 90%;
     height: 50%;
-    transform: skew(20deg) rotate(15deg);
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%; 
     transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+    clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
 
 
 
@@ -86,7 +85,6 @@ const Header = () => {
                           <h1>Software Developer</h1>
                           <h2>CompSci grad with a passion for buiding for the Web</h2>
                            <Jump count= '10'> 
-  
                               <Arrow  alt='' src={arrow}></Arrow>
                           </Jump> 
                       </Bounce>

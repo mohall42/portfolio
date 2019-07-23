@@ -13,7 +13,6 @@ const Container = styled.div`
 
 const Icon = styled.img` 
     src: url(${props => props.src})
-
     display: block;
     margin-top: 3%;
     margin-left: 5%;
