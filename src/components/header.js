@@ -1,6 +1,5 @@
 import React from 'react'
 import Bounce from 'react-reveal/Bounce'
-import Slide from 'react-reveal/Slide'
 import Jump from 'react-reveal/Jump'
 import styled from "styled-components"
 import arrow from '../images/arrow.svg'
@@ -10,17 +9,19 @@ const Head = styled.section `
     display: block;
     box-sizing: border-box;
     width: 100%;
-    height: 90vh;
-    
+    height: 100vh;
 
+
+   
 `;
 
 const Banner = styled.div`
     
     background: #434343;  /* fallback for old browsers */
-    background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #355C7D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
 
@@ -32,8 +33,10 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
     left: 50%;
     margin-right: -50%; 
     transform: translate(-50%, -50%);
-    -webkit-clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
+
+   
 
 
 
@@ -67,7 +70,8 @@ const Arrow = styled.img`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    fill: green;
+    margin-top: 9%
+    
 
     
 `;
@@ -79,8 +83,8 @@ const Header = () => {
     return (
 
         <Head>
-            <Slide>
-
+            
+            
             <Banner> 
               
               
@@ -99,7 +103,7 @@ const Header = () => {
   
               </Content>
             </ Banner >
-            </Slide>
+           
         
         
         </Head> 

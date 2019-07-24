@@ -39,7 +39,7 @@ const NavBar = () => {
                  
                     <Link to = {"/"}>
 
-                        <Flash>
+                        <Flash >
 
                         <Icon  src={logo} alt = 'Michael Hall'></Icon>
                         </Flash>
