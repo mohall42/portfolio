@@ -4,6 +4,7 @@ import indexStyled from './index.module.scss'
 import Contact from '../components/contactMe'
 import About from '../components/about'
 import Header from '../components/header'
+import Project from '../components/projects'
 
 
 
@@ -21,12 +22,9 @@ const Index = () => {
        
         <Navbar />
       
-          <Header />
-    
-        
-         
+        <Header />
         <About />
-
+        <Project />
        
         <Contact />
         
