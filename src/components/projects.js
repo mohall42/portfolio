@@ -1,6 +1,9 @@
 import React from "react"
 import styled from 'styled-components'
 import Slider from 'react-slick'
+import {Helmet} from 'react-helmet'
+
+
 
 
 
@@ -34,6 +37,10 @@ const Project = () => {
     return (
 
         <Section>
+            <Helmet>
+            @import "~slick-carousel/slick/slick.css";
+            @import "~slick-carousel/slick/slick-theme.css";
+            </Helmet>
 
             <Container>
                 <Slider
