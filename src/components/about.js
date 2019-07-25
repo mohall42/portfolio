@@ -19,6 +19,12 @@ height: 80vh;
 
 `;
 
+const Container = styled.div` 
+
+
+
+`;
+
 const WrapperRow = styled.div` 
 
 display: flex;
@@ -30,18 +36,21 @@ margin-top: 5%;
   flex: 50%;
   color: white;
   font-family: "Formular";
+  font-size: 1.5vmax;
+  
 }
 
 .title{
 
-  justify-content: center;
   border-right: 6px solid #000000;
 
 }
 
 
 .body{
-  /* margin-left: 1%; */
+  position: relative;
+   left: 2%;
+
 }
 
 @media screen and (max-width: 600px) {

@@ -1,5 +1,7 @@
 import React from "react"
 import styled from 'styled-components'
+import Slider from 'react-slick'
+
 
 
 
@@ -8,17 +10,20 @@ const Section = styled.section`
 display: block;
 box-sizing: border-box;
 width: 100%;
-height: 100vh;
+height: 60vh;
 
 
 `;
 
-const Frame = styled.div ` 
+const Container = styled.div ` 
 
-    height: 80%;
-    width: 80%;
-    margin: 0, auto;
-    background: #434343;  /* fallback for old browsers */
+    width: 100;
+  
+`;
+
+const Page = styled.div ` 
+
+    width: 100;
   
 `;
 
@@ -30,10 +35,19 @@ const Project = () => {
 
         <Section>
 
-            <Frame>
+            <Container>
+                <Slider
+                slidesToShow={1}
+                slidesToScroll={1}
+                infinite={false}
+                >
+                <Page>Page 1</Page>
+                <Page>Page 2</Page>
+                <Page>Page 3</Page>
 
-                <p>Projects</p>
-            </Frame>
+
+                </Slider>
+            </Container>
 
 
         </Section>
