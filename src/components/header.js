@@ -20,12 +20,9 @@ const Head = styled.section `
 
 const Content = styled.div ` 
 
-    h1, h2 {
-            
-            
-        font-size: 2em;
+    h1{
         font-family: "Formular";
-        font-size: 15vmin;
+        font-size: 11vmin;
         text-align: center;
         color: white;
     }
@@ -66,7 +63,7 @@ const Header = () => {
                 <Bounce Top delay={2500}>
 
                     <h1>Software Developer</h1>
-                    <h2></h2>
+                    
                     <Jump count= '10' delay={1000}> 
                         <Arrow  alt='' src={arrow}></Arrow>
                     </Jump> 

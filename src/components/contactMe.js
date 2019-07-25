@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import contactStyles from './contact.module.scss'
 import DribbbleLogo from '../images/dribbble.png'
 import GitHubLogo from '../images/github.png'
 import EmailLogo from '../images/email.png'
