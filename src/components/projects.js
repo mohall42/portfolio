@@ -16,15 +16,10 @@ height: 100vh;
 const Frame = styled.div ` 
 
     height: 80%;
-    width: 80%:
+    width: 80%;
     margin: 0, auto;
-
-    background: #1D4350;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
+    background: #434343;  /* fallback for old browsers */
+  
 `;
 
 
@@ -44,10 +39,6 @@ const Project = () => {
         </Section>
 
     )
-
-
-
-
 }
 
 export default Project

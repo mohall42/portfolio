@@ -10,39 +10,13 @@ const Head = styled.section `
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
+    position: relative;
+    z-index: 0;
 
 
    
 `;
 
-const Banner = styled.div`
-    
-    background: #434343;  /* fallback for old browsers */
-    background: #1D4350;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-
-
-
-    width: 90%;
-    height: 50%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%; 
-    transform: translate(-50%, -50%);
-    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
-
-   
-
-
-
-`;
 
 const Content = styled.div ` 
 
@@ -50,12 +24,14 @@ const Content = styled.div `
             
             
         font-size: 2em;
+        font-family: "Formular";
+        font-size: 15vmin;
         text-align: center;
         color: white;
     }
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     margin-right: -50%; 
     transform: translate(-50%, -50%);
@@ -85,29 +61,20 @@ const Header = () => {
     return (
 
         <Head>
+                 
+            <Content>
+                <Bounce Top delay={2500}>
+
+                    <h1>Software Developer</h1>
+                    <h2></h2>
+                    <Jump count= '10' delay={1000}> 
+                        <Arrow  alt='' src={arrow}></Arrow>
+                    </Jump> 
+                </Bounce>
             
-            
-            <Banner> 
-              
-              
-              <Content>
+
+            </Content>
                 
-  
-                      <Bounce bottom delay={2500}>
-  
-                          <h1>Software Developer</h1>
-                          <h2>CompSci grad with a passion for buiding for the Web</h2>
-                           <Jump count= '10'> 
-                              <Arrow  alt='' src={arrow}></Arrow>
-                          </Jump> 
-                      </Bounce>
-                  
-  
-              </Content>
-            </ Banner >
-           
-        
-        
         </Head> 
     )
 }
