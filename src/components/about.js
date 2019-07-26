@@ -19,11 +19,6 @@ height: 80vh;
 
 `;
 
-const Container = styled.div` 
-
-
-
-`;
 
 const WrapperRow = styled.div` 
 
