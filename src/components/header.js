@@ -22,7 +22,7 @@ const Content = styled.div `
 
     h1{
         font-family: "Formular";
-        font-size: 11vmin;
+        font-size: 9vmin;
         text-align: center;
         color: white;
     }
@@ -54,6 +54,8 @@ const Arrow = styled.img`
 
 
 const Header = () => {
+
+
 
     return (
 

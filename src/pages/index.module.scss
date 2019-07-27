@@ -1,12 +1,14 @@
-
 @import url(//db.onlinewebfonts.com/c/419fa9c2bf7fadf2bd9edecfe4d8c936?family=Formular);
 
+    html{
 
-html{
-    height: 100%;
-    margin: 0;
-    font-family: 'Formular', sans-serif;
-    background: url(../images/shattered-island.gif);
-    background-size: auto;
-}
+
+        height: 100%;
+        margin: 0;
+        font-family: 'Formular', sans-serif;
+        background: url(../images/shattered-island.gif);
+        background-size: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 

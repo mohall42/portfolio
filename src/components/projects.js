@@ -2,10 +2,9 @@ import React from "react"
 import styled from 'styled-components'
 import Slider from 'react-slick'
 import {Helmet} from 'react-helmet'
+import {graphql, useStaticQuery} from 'gatsby'
 
-
-
-
+import Img from 'gatsby-image'
 
 
 const Section = styled.section` 
@@ -24,33 +23,53 @@ const Container = styled.div `
   
 `;
 
-const Page = styled.div ` 
+const Card = styled.div ` 
 
-    width: 100%;
+    width: 20%;
+    height: 20%;
   
 `;
 
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 9000) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`;
 
 
 const Project = () => {
+
+    const data = useStaticQuery (graphql`
+    query {
+      portfolio: file(relativePath: {eq: "images/ocean.jpg"}){
+        ...fluidImage
+      }
+    }
+  `)
+
 
     return (
 
         <Section>
             <Helmet>
             <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
             </Helmet>
 
             <Container>
                 <Slider
-                slidesToShow={1}
-                slidesToScroll={1}
-                infinite={false}
+                    dots={true}
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                    infinite={false}
                 >
-                <Page>Page 1</Page>
-                <Page>Page 2</Page>
-                <Page>Page 3</Page>
+                <Card><Img fluid={data.portfolio.childImageSharp.fluid}/></Card>
+                <Card>Page 2</Card>
+                <Card>Page 3</Card>
 
 
                 </Slider>
@@ -63,5 +82,10 @@ const Project = () => {
 }
 
 export default Project
+
+
+
+
+
 
 

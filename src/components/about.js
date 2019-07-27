@@ -37,7 +37,7 @@ margin-top: 5%;
 
 .title{
 
-  border-right: 6px solid #000000;
+  border-right: 4px solid #000000;
 
 }
 

@@ -5,6 +5,7 @@ import GitHubLogo from '../images/github.png'
 import EmailLogo from '../images/email.png'
 
 
+
 const Container = styled.div` 
 
     h2{
