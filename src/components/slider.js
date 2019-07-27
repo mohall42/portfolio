@@ -55,7 +55,7 @@ const Slide = () =>{
                 arrows={false}
                 adaptiveHeight={true}
             >
-                <slide><Img fluid={data.portfolio.childImageSharp.fluid} /></slide>
+                <Card><Img fluid={data.portfolio.childImageSharp.fluid} /></Card>
                 <Card>Page 2</Card>
                 <Card>Page 3</Card>
 

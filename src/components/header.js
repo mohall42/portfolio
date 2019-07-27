@@ -66,7 +66,7 @@ const Header = () => {
 
                     <h1>Software Developer</h1>
                     
-                    <Jump count= '10' delay={1000}> 
+                    <Jump count={10} delay={1000}> 
                         <Arrow  alt='' src={arrow}></Arrow>
                     </Jump> 
                 </Bounce>

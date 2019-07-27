@@ -19,6 +19,7 @@ const Container = styled.div`
 
         height: 10vmin;
         width: 10vmin;
+        color: blue
        
     }
 
@@ -44,14 +45,14 @@ const Contact = () => {
     return(
 
         <Container>
-            <h2 class= "h2">Get in touch with me!!!</h2>
+            <h2>Get in touch with me!!!</h2>
             <Flex>
                 
-                <a  href= "https://dribbble.com/"><img class = "symbol" src = {DribbbleLogo} alt=" "></img></a>
+                <a  href= "https://dribbble.com/"><img className={'symbol'} src = {DribbbleLogo} alt=" "></img></a>
             
-                <a  href = "/"><img class="symbol" src = {GitHubLogo} alt=" "></img></a>
+                <a  href = "/"><img className={'symbol'} src = {GitHubLogo} alt=" "></img></a>
             
-                <a href = "/"><img class = "symbol"  src = {EmailLogo} alt=" "></img></a>
+                <a href = "/"><img className={'symbol'}  src = {EmailLogo} alt=" "></img></a>
             
                 
             </Flex>
