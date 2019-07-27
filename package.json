@@ -26,6 +26,7 @@
     "gatsby-transformer-sharp": "^2.2.3",
     "intersection-observer": "^0.7.0",
     "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",

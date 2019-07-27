@@ -31,7 +31,7 @@ margin-top: 5%;
   flex: 50%;
   color: white;
   font-family: "Formular";
-  font-size: 1.5vmax;
+  font-size: 1.5vmin;
   
 }
 

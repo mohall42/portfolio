@@ -7,14 +7,21 @@ import styled from 'styled-components'
 
 const Container = styled.div ` 
 
-    width: 100%;
+    
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+   
+    }
   
 `;
 
 const Card = styled.div ` 
 
-  height:40%;
-`;
+  `;
 
 export const fluidImage = graphql`
 fragment fluidImage on File {
@@ -30,7 +37,7 @@ const Slide = () =>{
 
     const data = useStaticQuery (graphql`
     query {
-      portfolio: file(relativePath: {eq: "test.jpg"}){
+      portfolio: file(relativePath: {eq: "images/test.jpg"}){
         ...fluidImage
       }
     }
@@ -41,10 +48,10 @@ const Slide = () =>{
 
 
         <Container>
-        <Helmet>
-        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-        </Helmet>
+          <Helmet>
+          <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+          </Helmet>
 
         <Slider
                 dots={true}
@@ -53,9 +60,8 @@ const Slide = () =>{
                 infinite={false}
                 swipeToSlide={true}
                 arrows={false}
-                adaptiveHeight={true}
             >
-                <Card><Img fluid={data.portfolio.childImageSharp.fluid} /></Card>
+               <Card><Img fluid={data.portfolio.childImageSharp.fluid} /></Card> 
                 <Card>Page 2</Card>
                 <Card>Page 3</Card>
 

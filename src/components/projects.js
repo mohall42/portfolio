@@ -14,6 +14,7 @@ height: 60vh;
 
 
 
+
 const Project = () => {
 
     
@@ -22,10 +23,8 @@ const Project = () => {
     return (
 
         <Section>
-           
-            <Slider />
-           
-
+          
+                <Slider />
 
         </Section>
 
