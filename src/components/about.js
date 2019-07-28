@@ -29,9 +29,8 @@ margin-top: 5%;
 
 .column{
   flex: 50%;
-  color: white;
   font-family: "Formular";
-  font-size: 1.5vmin;
+  font-size: 2vmin;
   
 }
 

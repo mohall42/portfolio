@@ -24,14 +24,27 @@ const Content = styled.div `
         font-family: "Formular";
         font-size: 9vmin;
         text-align: center;
-        color: white;
     }
+
+    .left{
+        padding-bottom: 7%;
+    }
+
+    .right{
+        padding-top: 7%;
+    }
+
+    display: flex;
+    justfy-content: flex-end;
     margin: 0;
     position: absolute;
     top: 40%;
     left: 50%;
     margin-right: -50%; 
     transform: translate(-50%, -50%);
+
+
+
 
 `;
 
@@ -64,15 +77,17 @@ const Header = () => {
             <Content>
                 <Bounce Top delay={2500}>
 
-                    <h1>Software Developer</h1>
-                    
+                    <h1 className = "left">CompSci Graduate</h1>
                     <Jump count={10} delay={1000}> 
                         <Arrow  alt='' src={arrow}></Arrow>
                     </Jump> 
+                    <h1 className = "right">Software Developer</h1>
+                    
                 </Bounce>
             
 
             </Content>
+                    
                 
         </Head> 
     )

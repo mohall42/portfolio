@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import DribbbleLogo from '../images/dribbble.png'
 import GitHubLogo from '../images/github.png'
 import EmailLogo from '../images/email.png'
+import logo from '../images/logo.svg'
 
 
 
@@ -10,7 +11,7 @@ const Container = styled.div`
 
     h2{
         text-align: center;
-        color: white;
+        
         margin-top: 5%;
         font-family: "Formular";
     }
@@ -19,7 +20,7 @@ const Container = styled.div`
 
         height: 10vmin;
         width: 10vmin;
-        color: blue
+        
        
     }
 
@@ -34,10 +35,6 @@ const Flex = styled.div`
     justify-content: space-around;
     margin: 10% 10%;   
     
-
-
-
-
 `;
 
 
@@ -45,15 +42,17 @@ const Contact = () => {
     return(
 
         <Container>
-            <h2>Get in touch with me!!!</h2>
             <Flex>
+            
+                <h2>Get in touch with me </h2>
                 
-                <a  href= "https://dribbble.com/"><img className={'symbol'} src = {DribbbleLogo} alt=" "></img></a>
+                <a  href= "https://dribbble.com/"><img className='symbol' src = {DribbbleLogo} alt=" "></img></a>
             
-                <a  href = "/"><img className={'symbol'} src = {GitHubLogo} alt=" "></img></a>
+                <a  href = "/"><img className='symbol' src = {GitHubLogo} alt=" "></img></a>
             
-                <a href = "/"><img className={'symbol'}  src = {EmailLogo} alt=" "></img></a>
-            
+                <a href = "/"><img className='symbol'  src = {EmailLogo} alt=" "></img></a>
+                
+                <a href = "/"><img className='symbol'  src = {logo} alt=" "></img></a>
                 
             </Flex>
         </Container>
