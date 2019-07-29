@@ -31,6 +31,21 @@ fragment fluidImage on File {
 }
 `;
 
+const StyledCard = styled(Card)` 
+
+position: relative;
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px 0px rgba(23, 23, 23, 0.2);
+    border-radius: $card-border-radius;
+
+
+
+`;
+
+
 const Slide = () =>{
 
     const data = useStaticQuery (graphql`
@@ -61,11 +76,11 @@ const Slide = () =>{
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
           </Helmet>
 
-          <Card
+          <StyledCard
              title={fill.title}
               body={fill.body}
               image={fill.image}>   
-              </Card>
+              </StyledCard>
                
        
 
