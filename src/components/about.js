@@ -14,7 +14,7 @@ position: relative;
 z-index: 0;
 box-sizing: border-box;
 width: 100%;
-height: 80vh;
+height: 40vh;
 
 
 `;
@@ -36,7 +36,7 @@ margin-top: 5%;
 
 .title{
 
-  border-right: 4px solid #000000;
+  border-right: 1px solid #000000;
 
 }
 
@@ -79,8 +79,7 @@ return(
               </div>
   
               <div className = "column body">
-                <h2><div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}> 
-                </div></h2>
+                <h2><div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}} /></h2>
               </div>
 
         </WrapperRow>      

@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 import Slider from 'react-slick'
 import {Helmet} from 'react-helmet'
 import {graphql, useStaticQuery} from 'gatsby'
+import Card from '../components/card'
 import styled from 'styled-components'
 
 const Container = styled.div ` 
@@ -19,9 +20,6 @@ const Container = styled.div `
   
 `;
 
-const Card = styled.div ` 
-
-  `;
 
 export const fluidImage = graphql`
 fragment fluidImage on File {
@@ -42,9 +40,19 @@ const Slide = () =>{
       }
     }
   `)
+   
+  const fill = ({
+    title:'Portfolio',
+    body: 'Something',
+    image: data.portfolio,
+    
 
+   })
+  
   return (
         
+    
+
 
 
         <Container>
@@ -53,20 +61,13 @@ const Slide = () =>{
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
           </Helmet>
 
-        <Slider
-                dots={true}
-                slidesToShow={1}
-                slidesToScroll={1}
-                infinite={false}
-                swipeToSlide={true}
-                arrows={false}
-            >
-               <Card><Img fluid={data.portfolio.childImageSharp.fluid} /></Card> 
-                <Card>Page 2</Card>
-                <Card>Page 3</Card>
-
-
-            </Slider>
+          <Card
+             title={fill.title}
+              body={fill.body}
+              image={fill.image}>   
+              </Card>
+               
+       
 
 
         </Container>

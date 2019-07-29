@@ -24,8 +24,8 @@ const Icon = styled.img`
         margin-top: 4%;
         margin-left: auto;
         margin-right: auto;
-        height: 65%;
-        width: 65%;
+        height: 55%;
+        width: 55%;
  
 } 
 `;

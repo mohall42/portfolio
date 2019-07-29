@@ -12,7 +12,31 @@ const Head = styled.section `
     height: 100vh;
     position: relative;
     z-index: 0;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        top: 80%;
+        left: -50%;
+        width: 100%;
+        height:5%;
+        background: #000;
+        transform-origin: right;
+        transform: skewY(8deg);
 
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 80%;
+        right: -50%;
+        width: 100%;
+        height:5%;
+        background: #000;
+        transform-origin: left;
+        transform: skewY(-8deg);
+
+    }
 
    
 `;
@@ -20,25 +44,10 @@ const Head = styled.section `
 
 const Content = styled.div ` 
 
-    h1{
-        font-family: "Formular";
-        font-size: 9vmin;
-        text-align: center;
-    }
-
-    .left{
-        padding-bottom: 7%;
-    }
-
-    .right{
-        padding-top: 7%;
-    }
-
-    display: flex;
-    justfy-content: flex-end;
+    font-size: 4vmin;
     margin: 0;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     margin-right: -50%; 
     transform: translate(-50%, -50%);
@@ -52,8 +61,8 @@ const Arrow = styled.img`
 
     
     src: url(${props => props.src});
-    width: 7%;
-    height: 7%;
+    width: 6%;
+    height: 6%;
     transform: rotate(90deg);
     display: block;
     margin-left: auto;
@@ -76,15 +85,15 @@ const Header = () => {
                  
             <Content>
                 <Bounce Top delay={2500}>
-
-                    <h1 className = "left">CompSci Graduate</h1>
-                    <Jump count={10} delay={1000}> 
-                        <Arrow  alt='' src={arrow}></Arrow>
-                    </Jump> 
-                    <h1 className = "right">Software Developer</h1>
+                
+                    <h1>Hello, im Michael</h1>
+                    <p>I'm a newly graduated CompSci major looking for his first steps</p>
                     
-                </Bounce>
-            
+                </Bounce>    
+                {/* <Jump count={10} delay={1000}> 
+                    <Arrow  alt='' src={arrow}></Arrow>
+                </Jump>  */}
+                    
 
             </Content>
                     

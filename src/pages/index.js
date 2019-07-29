@@ -4,6 +4,7 @@ import Contact from '../components/contactMe'
 import About from '../components/about'
 import Header from '../components/header'
 import Project from '../components/projects'
+import Education from '../components/education'
 import styled from 'styled-components'
 import Background from '../components/background'
 import { graphql } from "gatsby";
@@ -49,6 +50,7 @@ const Index = ({data}) => {
           <Navbar />
           <Header />
           <About />
+          <Education />
           <Project />
           <Contact />
 
