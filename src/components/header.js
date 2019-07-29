@@ -29,8 +29,8 @@ const Head = styled.section `
         content: '';
         position: absolute;
         top: 80%;
-        right: -50%;
-        width: 100%;
+        right: 0%;
+        width: 50%;
         height:5%;
         background: #000;
         transform-origin: left;
@@ -90,9 +90,9 @@ const Header = () => {
                     <p>I'm a newly graduated CompSci major looking for his first steps</p>
                     
                 </Bounce>    
-                {/* <Jump count={10} delay={1000}> 
+                <Jump count={10} delay={1000}> 
                     <Arrow  alt='' src={arrow}></Arrow>
-                </Jump>  */}
+                </Jump> 
                     
 
             </Content>
