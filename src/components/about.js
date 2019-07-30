@@ -75,11 +75,11 @@ return(
         <WrapperRow>
 
               <div className = "column title">
-                <h1>About Me</h1>
+                <h2>About Me</h2>
               </div>
   
               <div className = "column body">
-                <h2><div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}} /></h2>
+                <p><div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}} /></p>
               </div>
 
         </WrapperRow>      

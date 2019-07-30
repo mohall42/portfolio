@@ -8,6 +8,11 @@ const Section = styled.section`
     height: 50vh;
     font-size: 2vmin;
 
+    .title{
+        margin: 0 8%;
+        font-weight: bold;
+    }
+
 `;
 
 const Container = styled.div` 
@@ -37,8 +42,9 @@ const Experience = () => {
     return(
 
         <Section>
-        <h3>Education</h3>
+        <h2 className="title">Education</h2>
             <Container>
+                
                 <div className='section'>
                     <FlexContainer>
                         <h3>Tennessesse Technoogical University</h3>
