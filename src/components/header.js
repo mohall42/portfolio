@@ -11,6 +11,7 @@ const Head = styled.section `
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow:hidden;
     z-index: 0;
     
     &::before{
@@ -29,8 +30,8 @@ const Head = styled.section `
         content: '';
         position: absolute;
         top: 80%;
-        right: 0%;
-        width: 50%;
+        right: -50%;
+        width: 100%;
         height:5%;
         background: #000;
         transform-origin: left;

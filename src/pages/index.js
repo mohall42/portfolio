@@ -27,6 +27,7 @@ const Wrapper = styled.section`
 
   font-family: "Formular";
   margin: 0;
+  padding: 0;
   
 
    
