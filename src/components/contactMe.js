@@ -1,39 +1,51 @@
 import React from 'react'
 import styled from 'styled-components'
-import DribbbleLogo from '../images/dribbble.png'
-import GitHubLogo from '../images/github.png'
-import EmailLogo from '../images/email.png'
+import DribbbleLogo from '../images/dribbble.svg'
+import GitHubLogo from '../images/git.svg'
+import Resume from '../images/resume.svg'
 import logo from '../images/logo.svg'
 
 
 
-const Container = styled.div` 
+const Container = styled.section` 
 
-    h2{
-        text-align: center;
-        
-        margin-top: 5%;
-        font-family: "Formular";
-    }
+    display: block;
+    width: 100%;
+    height: 20%;
+    margin: 5% auto;  
 
-    .symbol{
 
-        height: 10vmin;
-        width: 10vmin;
-        
-       
-    }
 
+    
 
 
 `;
 
 const Flex = styled.div` 
 
+    width: 100%;
     list-style: none;
     display: flex;
     justify-content: space-around;
-    margin: 10% 10%;   
+
+    h3{
+        font-size: 2vmin;
+    }
+     
+
+    .symbol{
+
+        height: 5vmin;
+        width: 5vmin;
+
+
+    }
+
+    .logo{
+        height: calc(30px + 5vw);
+        width:  calc(30px + 5vw);
+    }
+
     
 `;
 
@@ -44,15 +56,15 @@ const Contact = () => {
         <Container>
             <Flex>
             
-                <h2>Get in touch with me </h2>
+                <h3>Get in touch with me </h3>
                 
                 <a  href= "https://dribbble.com/"><img className='symbol' src = {DribbbleLogo} alt=" "></img></a>
             
                 <a  href = "/"><img className='symbol' src = {GitHubLogo} alt=" "></img></a>
             
-                <a href = "/"><img className='symbol'  src = {EmailLogo} alt=" "></img></a>
+                <a href = "/"><img className='symbol'  src = {Resume} alt=" "></img></a>
                 
-                <a href = "/"><img className='symbol'  src = {logo} alt=" "></img></a>
+                <img className='logo'  src = {logo} alt=" "></img>
                 
             </Flex>
         </Container>

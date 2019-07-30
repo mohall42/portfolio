@@ -44,7 +44,9 @@ const Head = styled.section `
 
 const Content = styled.div ` 
 
-    font-size: 4vmin;
+   ${'' /*  font-size: 4vmin; */}
+    font-size: calc(10px + 1.5vw);
+    font-weight: bold;
     margin: 0;
     position: absolute;
     top: 35%;
@@ -61,8 +63,8 @@ const Arrow = styled.img`
 
     
     src: url(${props => props.src});
-    width: 6%;
-    height: 6%;
+    width: calc(20px + 3vw);;
+    height: calc(20px + 3vw);
     transform: rotate(90deg);
     display: block;
     margin-left: auto;
@@ -87,7 +89,7 @@ const Header = () => {
                 <Bounce Top delay={2500}>
                 
                     <h1>Hello, im Michael</h1>
-                    <p>I'm a newly graduated CompSci major looking for his first steps</p>
+                    <p>I'm a newly graduated Computer Science major looking for his first steps</p>
                     
                 </Bounce>    
                 <Jump count={10} delay={1000}> 

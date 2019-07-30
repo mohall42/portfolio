@@ -26,6 +26,7 @@ const Wrapper = styled.section`
   @import url(//db.onlinewebfonts.com/c/419fa9c2bf7fadf2bd9edecfe4d8c936?family=Formular);
 
   font-family: "Formular";
+  margin: 0;
   
 
    
