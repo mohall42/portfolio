@@ -12,9 +12,8 @@ const Flex = styled.div`
 
     width: 100%;
     list-style: none;
-    display: flex;
-    height: 10%; 
-    margin: 5% auto;  
+    display: flex; 
+    margin-top: 5%;  
     justify-content: space-around;
 
     h3{
