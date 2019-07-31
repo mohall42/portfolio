@@ -7,25 +7,14 @@ import logo from '../images/logo.svg'
 
 
 
-const Container = styled.section` 
-
-    display: block;
-    width: 100%;
-    height: 20%;
-    margin: 5% auto;  
-
-
-
-    
-
-
-`;
 
 const Flex = styled.div` 
 
     width: 100%;
     list-style: none;
     display: flex;
+    height: 10%; 
+    margin: 5% auto;  
     justify-content: space-around;
 
     h3{
@@ -53,7 +42,6 @@ const Flex = styled.div`
 const Contact = () => {
     return(
 
-        <Container>
             <Flex>
             
                 <h3>Get in touch with me </h3>
@@ -67,7 +55,6 @@ const Contact = () => {
                 <img className='logo'  src = {logo} alt=" "></img>
                 
             </Flex>
-        </Container>
 
         
 

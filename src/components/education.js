@@ -9,7 +9,7 @@ const Section = styled.section`
     font-size: 2vmin;
 
     .title{
-        margin: 0 8%;
+        margin: 0 2%;
         font-weight: bold;
     }
 
@@ -47,7 +47,7 @@ const Experience = () => {
                 
                 <div className='section'>
                     <FlexContainer>
-                        <h3>Tennessesse Technoogical University</h3>
+                        <h3>Tennessesse Technological University</h3>
                         <p>2016 - 2019</p>
                     </FlexContainer>
                     

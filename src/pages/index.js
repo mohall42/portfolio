@@ -1,17 +1,14 @@
 import React from "react"
-import Navbar from '../components/navbar'
-import Contact from '../components/contactMe'
+import Navbar from '../components/Navbar'
+import Contact from '../components/ContactMe'
 import About from '../components/about'
-import Header from '../components/header'
-import Project from '../components/projects'
-import Education from '../components/education'
+import Header from '../components/Header'
+import Slider from '../components/Projects'
+import Education from '../components/Education'
 import styled from 'styled-components'
 import Background from '../components/background'
 import { graphql } from "gatsby";
 
-
-// ES5 way
-// exports.onClientEntry = () => {
 // ES6 way
 export const onClientEntry = () => {  
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
@@ -21,13 +18,18 @@ export const onClientEntry = () => {
   }
 }
 
-const Wrapper = styled.section` 
+const Wrapper = styled.div` 
 
   @import url(//db.onlinewebfonts.com/c/419fa9c2bf7fadf2bd9edecfe4d8c936?family=Formular);
 
   font-family: "Formular";
-  margin: 0;
-  padding: 0;
+
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+  
+  width: 100%;
   
 
    
@@ -39,21 +41,20 @@ const Wrapper = styled.section`
 
 
 
-const Index = ({data}) => {
+const Index = ({}) => {
   
 
   
     return(
       
-      
-      
+
         <Wrapper>
 
           <Navbar />
           <Header />
           <About />
           <Education />
-          <Project />
+          <Slider />
           <Contact />
 
         </Wrapper>
@@ -63,20 +64,7 @@ const Index = ({data}) => {
   
 }
 
-export const query = graphql` 
 
-query {
-  waves: file(relativePath: { eq: "images/ocean.jpg" }) {
-    childImageSharp {
-      fluid(quality: 90, maxWidth: 300){
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-}
-
-
-`;
 
 
 

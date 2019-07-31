@@ -75,7 +75,20 @@ const Arrow = styled.img`
 
     
 `;
+export const query = graphql` 
 
+query {
+  waves: file(relativePath: { eq: "images/ocean.jpg" }) {
+    childImageSharp {
+      fluid(quality: 90, maxWidth: 300){
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+
+
+`;
 
 
 const Header = () => {
