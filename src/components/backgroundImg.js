@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import Navbar from '../components/navbar'
+import Navbar from './navbar'
 import BackgroundImage from 'gatsby-background-image'
 
 const BackgroundSection = ({ className, props }) => (
