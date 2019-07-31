@@ -12,7 +12,7 @@ const Box = styled.section `
     margin: 0 auto;
 
     @media screen and (max-width: 600px) {
-      width: 70%;
+      width: 90%;
       height: 20%;
    
     }
