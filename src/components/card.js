@@ -33,12 +33,13 @@ const CardContainer = styled.div`
 
   width: 500px;
   height: 600px;
-  box-shadow:  0px 4px 8px 0px rgba(23, 23, 23, 0.2);
+  box-shadow:  0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   border-radius: 8px;
-  background: #434343;
+  background: #673b91;
 
   h1, p, a{
     margin-left: 1%;
+    
   }
   @media screen and (max-width: 600px) {
 

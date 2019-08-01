@@ -45,20 +45,34 @@ const Slide = () =>{
 
     const data = useStaticQuery (graphql`
     query {
-      portfolio: file(relativePath: {eq: "images/test.jpg"}){
-        ...fluidImage
+      allMarkdownRemark(filter: { frontmatter: { title: { eq: "Project" } } }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              Name
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   `)
    
-  const fill = ({
+/*   const fill = ({
     title:'Portfolio',
     body: 'Something',
-    image: data.portfolio,
+    image: data.edges.
     link: 'https://www.netlify.com/docs/teams',
     
 
-   })
+   }) */
   
   return (
         
@@ -69,7 +83,17 @@ const Slide = () =>{
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
           </Helmet>
             <FlexRow>
-                <Card fill={fill} />
+              {data.allMarkdownRemark.edges.map((edge) =>{
+                
+                return(
+                 
+                 <p>Hello</p>
+                  
+                
+                )
+              }
+                
+              )}
             </FlexRow>
 
           
