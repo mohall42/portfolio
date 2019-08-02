@@ -1,8 +1,8 @@
 import React from 'react'
-import Bounce from 'react-reveal/Bounce'
 import Jump from 'react-reveal/Jump'
 import styled from "styled-components"
 import arrow from '../images/arrow.svg'
+import BackgroundImage from '../components/backgroundImg'
 
 const Head = styled.section `
 
@@ -78,10 +78,10 @@ const Arrow = styled.img`
 export const query = graphql` 
 
 query {
-  waves: file(relativePath: { eq: "images/ocean.jpg" }) {
+  header: file(relativePath: { eq: "images/Header.jpg" }) {
     childImageSharp {
-      fluid(quality: 90, maxWidth: 300){
-        ...GatsbyImageSharpFluid
+      fluid(quality: 90, maxWidth: 4160){
+        ...GatsbyImageSharpFluid_withWebp
       }
     }
   }
@@ -96,16 +96,19 @@ const Header = () => {
 
 
     return (
+       
+            
+    
 
         <Head>
-                 
+                  <BackgroundImage/>
             <Content>
-                <Bounce Top delay={2500}>
+               
                 
-                    <h1>Hello, im Michael</h1>
+                    <h1>Hello, I'm Michael</h1>
                     <p>I'm a newly graduated Computer Science major looking for his first steps</p>
                     
-                </Bounce>    
+                  
                 <Jump count={10} delay={1000}> 
                     <Arrow  alt='' src={arrow}></Arrow>
                 </Jump> 

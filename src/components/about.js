@@ -1,4 +1,6 @@
 import React from 'react'
+import withReveal from 'react-reveal/withReveal'
+import Slide from 'react-reveal/Slide'
 import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
 
@@ -9,28 +11,31 @@ import styled from 'styled-components'
 
 const Section = styled.section` 
 
-display: block;
-position: relative;
-z-index: 0;
-box-sizing: border-box;
-width: 100%;
-height: 40vh;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40vh;
+  margin: 0 auto;
 
+@media (max-width: 600px) {
+       
+  height: 30vh;
+
+}
 
 `;
 
 
-const WrapperRow = styled.div` 
+const WrapperRow = withReveal(styled.div` 
 
-display: flex;
-width: 80%;
-margin: 0 auto;
-margin-top: 5%;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5%;
 
 .column{
   flex: 50%;
   font-family: "Formular";
-  font-size: 2vmin;
+  font-size: calc(.5em + .75vw);
   
 }
 
@@ -48,12 +53,17 @@ margin-top: 5%;
 }
 
 @media screen and (max-width: 600px) {
+  flex-direction: column;
+  .title{
+    border-right: none;
+  }
+  
   .column {
     width: 100%;
   }
 }
 
-`;
+`, <Slide top />);
 
 const About = () => {
   const data = useStaticQuery( graphql `

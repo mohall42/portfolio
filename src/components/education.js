@@ -1,21 +1,31 @@
 import React from 'react'
+import withReveal from 'react-reveal/withReveal'
+import Slide from 'react-reveal/Slide'
 import styled from 'styled-components'
 
 
-const Section = styled.section` 
+
+const Section = withReveal(styled.section` 
 
     width: 100%;
     height: 50vh;
-    font-size: 2vmin;
+    font-size: calc(.5em + .75vw);
 
     .title{
         margin: 0 2%;
         font-weight: bold;
     }
 
-`;
+    @media screen and (max-width: 600px) {
 
-const Container = styled.div` 
+       
+        height: 40vh;
+
+    }
+
+`, <Slide top cascade />);
+
+const Container = withReveal(styled.div` 
 
     width:60%;
     margin: 0 auto;
@@ -24,7 +34,14 @@ const Container = styled.div`
         border-bottom: 1px solid #000000;
     }
 
-`;
+    @media screen and (max-width: 600px) {
+
+        width: 90%;
+
+
+    }
+
+`, <Slide top cascade />);
 
 const FlexContainer = styled.div`
 

@@ -2,6 +2,8 @@ import React from "react"
 import {Helmet} from 'react-helmet'
 import {graphql, useStaticQuery} from 'gatsby'
 import Card from './Card'
+import withReveal from 'react-reveal/withReveal'
+import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'
 
 const Box = styled.section ` 
@@ -20,25 +22,16 @@ const Box = styled.section `
 `;
 
 
-
-
-export const fluidImage = graphql`
-fragment fluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1000) {
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-`;
-
-const FlexRow = styled.div` 
+const FlexRow = withReveal(styled.div` 
  
   width: 100%;
   height: 50%;
   display: flex;
   margin: 0 auto;
-`;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+`, <Fade left cascade/>);
 
 
 const Slide = () =>{
@@ -50,29 +43,23 @@ const Slide = () =>{
           node {
             frontmatter {
               title
-              Name
+              name
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 800) {
+                  fluid(maxWidth: 1000){
                     ...GatsbyImageSharpFluid
                   }
                 }
               }
             }
+            excerpt
           }
         }
       }
     }
   `)
    
-/*   const fill = ({
-    title:'Portfolio',
-    body: 'Something',
-    image: data.edges.
-    link: 'https://www.netlify.com/docs/teams',
-    
 
-   }) */
   
   return (
         
@@ -85,10 +72,17 @@ const Slide = () =>{
             <FlexRow>
               {data.allMarkdownRemark.edges.map((edge) =>{
                 
+                const fill = ({
+                  body: edge.node.excerpt,
+                  title: edge.node.frontmatter.name,
+                  image: edge.node.frontmatter.featuredImage,
+
+                })
+
                 return(
                  
-                 <p>Hello</p>
-                  
+    
+                 <Card key={fill.title} fill={fill}/>
                 
                 )
               }

@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import Navbar from './navbar'
 import BackgroundImage from 'gatsby-background-image'
 
 const BackgroundSection = ({ className, props }) => (
     <StaticQuery query={graphql`
       query {
-        desktop: file(relativePath: { eq: "ocean.jpg" }) {
+        desktop: file(relativePath: { eq: "images/Header.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp
@@ -25,7 +24,7 @@ const BackgroundSection = ({ className, props }) => (
                            fluid={imageData}
                            backgroundColor={`#040e18`}
           >
-          <Navbar />
+         
           </BackgroundImage>
        )
      }

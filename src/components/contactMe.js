@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Wobble from 'react-reveal/Wobble'
 import DribbbleLogo from '../images/dribbble.svg'
 import GitHubLogo from '../images/git.svg'
 import Resume from '../images/resume.svg'
@@ -27,7 +28,6 @@ const Flex = styled.div`
         height: 5vmin;
         width: 5vmin;
 
-
     }
 
     .logo{
@@ -43,12 +43,15 @@ const Contact = () => {
     return(
 
             <Flex>
-            
-                <h3>Get in touch with me </h3>
+
+                <Wobble>
+                     <h3>Get in touch with me </h3>
+                </Wobble>
+               
                 
                 <a  href= "https://dribbble.com/"><img className='symbol' src = {DribbbleLogo} alt=" "></img></a>
             
-                <a  href = "/"><img className='symbol' src = {GitHubLogo} alt=" "></img></a>
+                <a  href = "https://github.com/mohall42"><img className='symbol' src = {GitHubLogo} alt=" "></img></a>
             
                 <a href = "/"><img className='symbol'  src = {Resume} alt=" "></img></a>
                 
