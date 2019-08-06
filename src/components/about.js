@@ -30,7 +30,7 @@ const Section = styled.section`
 
     }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
        
   height: 30vh;
 
@@ -42,14 +42,14 @@ const Section = styled.section`
 const WrapperRow = withReveal(styled.div` 
 
   display: flex;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
+  font-family: "Formular";
+  font-size: calc(10px + .65vw);
   
 
 .column{
   flex: 50%;
-  font-family: "Formular";
-  font-size: calc(.5em + .75vw);
   
 }
 
@@ -59,14 +59,26 @@ const WrapperRow = withReveal(styled.div`
 
 }
 
-
 .body{
   position: relative;
-   left: 2%;
+  left: 2%;
 
 }
 
-@media screen and (max-width: 600px) {
+
+@media(max-width: 1440px) {
+    width: 80%;
+
+}
+@media(max-width: 1024px) {
+    width: 80%;
+
+}
+@media(max-width: 768px) {
+  width: 90%;
+}
+
+@media (max-width: 600px) {
   flex-direction: column;
   .title{
     border-right: none;
@@ -102,9 +114,8 @@ return(
                 <h2>About Me</h2>
               </div>
   
-              <div className = "column body">
-                <p><div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}} /></p>
-              </div>
+              <div className = "column body" dangerouslySetInnerHTML={{__html: data.markdownRemark.html}} />
+              
 
         </WrapperRow>      
       </Section>

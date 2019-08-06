@@ -11,15 +11,15 @@ const Section = styled.div`
     color: white;
     position: relative;
     width: 100%;
-    height: 60vh;
-    font-size: calc(.5em + .75vw);
+    height: 68vh;
+    font-size: calc(.5em + .65vw);
     
 
     &::after{
         content: '';
         position: absolute;
         width: 100%;
-        height:35%;
+        height:25%;
         top: 100%;
         background: #333333;
         transform-origin: bottom right;
@@ -34,27 +34,27 @@ const Section = styled.div`
     }
 
     @media(max-width: 1440px) {
-        .title{
-            margin-top: 7%;
-        }
+     
+        height: 50vh;
+
+    }
+    @media(max-width: 1024px) {
         
         height: 40vh;
 
     }
-    @media(max-width: 1024px) {
-        .title{
-            margin-top: 7%;
-        }
+    @media(max-width: 768px) {
         
         height: 35vh;
+        margin-top: 3%;
 
     }
-    @media(max-width: 768px) {
-        .title{
-            margin-top: 7%;
-        }
-        
-        height: 30vh;
+    @media (max-width: 600px) {
+
+       .title{
+           margin-top: 6%;
+       }
+
 
     }
  
@@ -62,14 +62,27 @@ const Section = styled.div`
 
 const Container = withReveal(styled.div` 
 
-    width:60%;
+    width:50%;
     margin: 1% auto;
     
     .section{
         border-bottom: 1px solid white;
     }
 
-    @media screen and (max-width: 600px) {
+    @media(max-width: 1440px) {
+       
+        width: 70%;
+    }
+    @media(max-width: 1024px) {
+        
+
+    }
+    @media(max-width: 768px) {
+        width: 70%;
+        
+
+    }
+    @media (max-width: 600px) {
 
         width: 90%;
 

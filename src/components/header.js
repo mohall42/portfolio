@@ -46,14 +46,16 @@ const Content = styled.div `
 
    ${'' /*  font-size: 4vmin; */}
     color: white;
-    font-size: calc(10px + 1.5vw);
+    font-size: calc(10px + .65vw);
     font-weight: bold;
-    margin: 0;
+    margin: 0, 50%;
     position: absolute;
     top: 40%;
     left: 50%;
     margin-right: -50%; 
     transform: translate(-50%, -50%);
+
+   
 
 `;
 
@@ -65,8 +67,8 @@ const Arrow = styled.img`
     height: calc(20px + 3vw);
     transform: rotate(90deg);
     display: block;
-    position: relative;
-    top: 10%;
+    position: absolute;
+    top: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 9%
@@ -107,13 +109,14 @@ const Header = () => {
                <p>I'm a newly graduated Computer Science major looking for his first steps</p>
                
              
-                <Jump count={10} delay={1000}> 
-                    <Arrow  alt='' src={arrow}></Arrow>
-                </Jump> 
+               
                
 
             </Content>
-            
+             
+            {/*  <Jump count={10} delay={1000}> 
+                    <Arrow  alt='' src={arrow}></Arrow>
+            </Jump>  */}
             
 
 
