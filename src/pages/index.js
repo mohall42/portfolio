@@ -1,22 +1,11 @@
 import React from "react"
-import Navbar from '../components/Navbar'
 import Contact from '../components/ContactMe'
 import About from '../components/about'
 import Header from '../components/Header'
 import Projects from '../components/Projects'
 import Education from '../components/Education'
 import styled from 'styled-components'
-import Background from '../components/background'
-import { graphql } from "gatsby";
 
-// ES6 way
-export const onClientEntry = () => {  
-  // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
-  if (typeof window.IntersectionObserver === `undefined`) {
-    import(`intersection-observer`)
-    console.log(`# IntersectionObserver is polyfilled!`)
-  }
-}
 
 const Wrapper = styled.div` 
 
@@ -45,8 +34,6 @@ const Index = () => {
       
 
         <Wrapper>
-
-          <Navbar />
           <Header />
           <About />
           <Education />

@@ -21,12 +21,18 @@ const Flex = styled.div`
     h3{
         font-size: 2vmin;
     }
+
+    
      
 
     .symbol{
 
         height: 5vmin;
         width: 5vmin;
+        
+        &:hover{
+          transform: scale(1.5);
+        }
 
     }
 

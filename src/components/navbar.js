@@ -7,7 +7,7 @@ import Flash from 'react-reveal/Flash'
 
 
 const Container = styled.div`
-    display: block;
+   
 
 `;
 
@@ -43,8 +43,6 @@ const NavBar = () => {
 
                         <Icon  src={logo} alt = 'Michael Hall'></Icon>
                         </Flash>
-
-                        
                         
                     </Link>
                    

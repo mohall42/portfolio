@@ -12,9 +12,23 @@ import styled from 'styled-components'
 const Section = styled.section` 
 
   box-sizing: border-box;
+  position: relative;
   width: 100%;
   height: 40vh;
   margin: 0 auto;
+
+  &::after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height:50%;
+        background: #333333;
+        transform-origin: left;
+        transform: skewY(-3deg);
+        border-top: 20px solid black
+
+    }
 
 @media (max-width: 600px) {
        
@@ -30,7 +44,7 @@ const WrapperRow = withReveal(styled.div`
   display: flex;
   width: 90%;
   margin: 0 auto;
-  margin-top: 5%;
+  
 
 .column{
   flex: 50%;

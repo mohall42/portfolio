@@ -2,7 +2,7 @@
 
 title: Project
 name: Portfolio
-featuredImage: ./images/test.jpg
+featuredImage: ./images/portfolio.jpg
 ---
 
 I wrote this in the post 

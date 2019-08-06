@@ -2,7 +2,7 @@
 
 title: Project
 name: Recipe
-featuredImage: ./images/test.jpg
+featuredImage: ./images/recipe.png
 ---
 
-I wrote this in another post to test
+A Tinder style pick or pass recipe app. Pulls recipes from api and give ablitity to choose and save intresting recipes.

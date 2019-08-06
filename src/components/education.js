@@ -5,33 +5,68 @@ import styled from 'styled-components'
 
 
 
-const Section = withReveal(styled.section` 
+const Section = styled.div` 
 
+    background: #333333;
+    color: white;
+    position: relative;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     font-size: calc(.5em + .75vw);
+    
 
-    .title{
-        margin: 0 2%;
-        font-weight: bold;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height:35%;
+        top: 100%;
+        background: #333333;
+        transform-origin: bottom right;
+        transform: skewY(3deg);
+        border-bottom: 20px solid black;
     }
 
-    @media screen and (max-width: 600px) {
+    .title{
+        margin: 2%;
+        font-weight: bold;
+        padding-top:1%;
+    }
 
-       
+    @media(max-width: 1440px) {
+        .title{
+            margin-top: 7%;
+        }
+        
         height: 40vh;
 
     }
+    @media(max-width: 1024px) {
+        .title{
+            margin-top: 7%;
+        }
+        
+        height: 35vh;
 
-`, <Slide top cascade />);
+    }
+    @media(max-width: 768px) {
+        .title{
+            margin-top: 7%;
+        }
+        
+        height: 30vh;
+
+    }
+ 
+`;
 
 const Container = withReveal(styled.div` 
 
     width:60%;
-    margin: 0 auto;
-
+    margin: 1% auto;
+    
     .section{
-        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid white;
     }
 
     @media screen and (max-width: 600px) {
@@ -48,9 +83,6 @@ const FlexContainer = styled.div`
     display: flex;
    justify-content: space-between;
     
-
-
-
 `;
 
 const Experience = () => {

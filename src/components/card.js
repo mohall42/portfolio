@@ -12,7 +12,8 @@ class Card extends Component {
 render(){
 
     const ImageContainer = styled.div` 
-    width: 500px;
+    width: 100%;
+    display: block;
     
     Img{
       border-radius: 8px;
@@ -26,10 +27,7 @@ render(){
       }
       
     @media screen and (max-width: 600px) {
-
     width: 100%;
-
-
    }
 
     `;
@@ -40,21 +38,48 @@ render(){
     height: 600px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 8px;
-    background: #00b7d7;
+    background: #333333;
+    
    
+    @media screen and (max-width: 1024px) {
+  
+      width: 50%;
+      height: 90%;
+      margin-bottom: 5%;
+      margin-left: 5%;
+  
+     
+    }
+    @media screen and (max-width: 768px) {
+  
+      width: 70%;
+      height: 100%;
+      margin-bottom: 5%;
+  
+     
+    }
+  
     @media screen and (max-width: 600px) {
   
       width: 100%;
+      height: 100%;
+      margin-bottom: 5%;
+      margin-left: 0;
   
      
     }
   
   `;
 
-    const BodyContainer = withReveal(styled.div ` 
+    const BodyContainer = styled.div ` 
 
       margin-left: 1%;
-    `, <Fade />)
+      font-size: 16px;
+      color: white;
+     
+
+      
+    `;
 
 
        
@@ -68,7 +93,7 @@ render(){
           </ImageContainer>
           <BodyContainer>
 
-            <h1>{title}</h1>
+            <h3>{title}</h3>
             
             <p>{body}</p>
             <a href={link}><img alt={title} src={logo}></img></a>
