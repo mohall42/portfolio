@@ -38,6 +38,7 @@ const Slide = () =>{
             frontmatter {
               title
               name
+              link
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 1000){
@@ -70,6 +71,7 @@ const Slide = () =>{
                   body: edge.node.excerpt,
                   title: edge.node.frontmatter.name,
                   image: edge.node.frontmatter.featuredImage,
+                  link: edge.node.frontmatter.link,
 
                 })
 

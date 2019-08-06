@@ -11,7 +11,7 @@ const Section = styled.div`
     color: white;
     position: relative;
     width: 100%;
-    height: 68vh;
+    height: 64vh;
     font-size: calc(.5em + .65vw);
     
 
@@ -71,7 +71,7 @@ const Container = withReveal(styled.div`
 
     @media(max-width: 1440px) {
        
-        width: 70%;
+        width: 60%;
     }
     @media(max-width: 1024px) {
         
