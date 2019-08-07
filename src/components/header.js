@@ -67,11 +67,9 @@ const Arrow = styled.img`
     height: calc(20px + 3vw);
     transform: rotate(90deg);
     display: block;
-    position: absolute;
-    top: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 9%
+    position: relative;
+    top: 100%;
+    margin: 0 auto;
     
 `;
 
@@ -111,12 +109,12 @@ const Header = () => {
              
                
                
+             <Jump count={10} delay={1000}> 
+                    <Arrow  alt='' src={arrow}></Arrow>
+            </Jump> 
 
             </Content>
              
-            {/*  <Jump count={10} delay={1000}> 
-                    <Arrow  alt='' src={arrow}></Arrow>
-            </Jump>  */}
             
 
 

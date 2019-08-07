@@ -1,6 +1,4 @@
 import React, {Component}  from 'react'
-import Fade from 'react-reveal/Fade'
-import withReveal from 'react-reveal/withReveal'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
