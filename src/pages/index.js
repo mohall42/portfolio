@@ -1,4 +1,5 @@
 import React from "react"
+import {Helmet} from 'react-helmet'
 import Contact from '../components/ContactMe'
 import About from '../components/about'
 import Header from '../components/Header'
@@ -32,8 +33,9 @@ const Index = () => {
   
     return(
       
-
-        <Wrapper>
+       
+        <Wrapper> 
+        <Helmet title="Michaels-Portfolio" />
           <Header />
           <About />
           <Education />

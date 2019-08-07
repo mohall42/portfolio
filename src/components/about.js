@@ -14,7 +14,7 @@ const Section = styled.section`
   box-sizing: border-box;
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 55vh;
   margin: 0 auto;
 
   &::after{
@@ -32,7 +32,7 @@ const Section = styled.section`
 
 @media (max-width: 768px) {
        
-  height: 30vh;
+  height: 40vh;
 
 }
 
@@ -93,16 +93,13 @@ const WrapperRow = withReveal(styled.div`
 
 const About = () => {
   const data = useStaticQuery( graphql `
-  query{
-    markdownRemark{
-      frontmatter{
-        title
-      }
-      id
-      html
-    }
-  }
-
+  query {
+    markdownRemark(frontmatter:{title: { eq: "About Me"} }){
+        html
+       
+     }
+   }
+   
 `);
 
 return(
