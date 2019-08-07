@@ -22,7 +22,12 @@ module.exports = {
       path: `${__dirname}/src/images/`
     }
   } ,
-    
+  {
+    resolve: `gatsby-plugin-styled-components`,
+    options: {
+      // Add any options here
+    },
+  },
     
 `gatsby-plugin-react-helmet`,
 `gatsby-plugin-sass`,
@@ -30,5 +35,5 @@ module.exports = {
 `gatsby-transformer-sharp`,
 `gatsby-plugin-sharp`,
 `gatsby-transformer-remark`,
-`react-reveal`]
+`react-reveal`],
 }
