@@ -44,7 +44,6 @@ const WrapperRow = withReveal(styled.div`
   display: flex;
   width: 60%;
   margin: 0 auto;
-  font-family: "Formular";
   font-size: calc(10px + .65vw);
   
 

@@ -11,7 +11,7 @@ const Section = styled.div`
     color: white;
     position: relative;
     width: 100%;
-    height: 55vh;
+    height: 60vh;
     font-size: calc(.5em + .65vw);
     
 
