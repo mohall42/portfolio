@@ -11,7 +11,7 @@ const Section = styled.div`
     color: white;
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 60vmin;
     font-size: calc(.5em + .65vw);
     
 
@@ -35,17 +35,17 @@ const Section = styled.div`
 
     @media(max-width: 1440px) {
      
-        height: 40vh;
+        height: 30vmax;
 
     }
     @media(max-width: 1024px) {
         
-        height: 35vh;
+        height: 35vmax;
 
     }
     @media(max-width: 768px) {
         
-        height: 30vh;
+        height: 35vmax;
         margin-top: 3%;
 
     }

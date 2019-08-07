@@ -14,7 +14,7 @@ const Section = styled.section`
   box-sizing: border-box;
   position: relative;
   width: 100%;
-  height: 55vh;
+  height: 20vmax;
   margin: 0 auto;
 
   &::after{
@@ -32,7 +32,7 @@ const Section = styled.section`
 
 @media (max-width: 768px) {
        
-  height: 40vh;
+  height: 40vmax;
 
 }
 
