@@ -1,10 +1,10 @@
 import React from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
-import Navbar from './Navbar'
-import Jump from 'react-reveal/Jump'
+import Navbar from './navbar'
+/* import Jump from 'react-reveal/Jump' */
 import styled from "styled-components"
-import arrow from '../images/arrow.svg'
-import BackgroundImage from './Background'
+/* import arrow from '../images/arrow.svg' */
+import BackgroundImage from './background'
 
 
 const StyledBackgroundImage = styled(BackgroundImage)` 
@@ -59,7 +59,7 @@ const Content = styled.div `
 
 `;
 
-const Arrow = styled.img` 
+/* const Arrow = styled.img` 
 
     
     src: url(${props => props.src});
@@ -72,7 +72,7 @@ const Arrow = styled.img`
     margin: 0 auto;
     
 `;
-
+ */
 
 
 const Header = () => {
@@ -109,9 +109,9 @@ const Header = () => {
              
                
                
-             <Jump count={10} delay={1000}> 
+           {/*   <Jump count={10} delay={1000}> 
                     <Arrow  alt='' src={arrow}></Arrow>
-            </Jump> 
+            </Jump>  */}
 
             </Content>
              
