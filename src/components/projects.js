@@ -1,7 +1,7 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
 import {graphql, useStaticQuery} from 'gatsby'
-import Card from './Card'
+import Card from './card'
 import withReveal from 'react-reveal/withReveal'
 import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'

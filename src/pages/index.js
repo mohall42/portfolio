@@ -1,10 +1,10 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
-import Contact from '../components/ContactMe'
+import Contact from '../components/contactMe'
 import About from '../components/about'
-import Header from '../components/Header'
-import Projects from '../components/Projects'
-import Education from '../components/Education'
+import Header from '../components/header'
+import Projects from '../components/projects'
+import Education from '../components/education'
 import styled from 'styled-components'
 
 
