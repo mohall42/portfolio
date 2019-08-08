@@ -14,26 +14,34 @@ const Section = styled.section`
   box-sizing: border-box;
   position: relative;
   width: 100%;
-  height: 55vh;
+  height: 25vmax;
   margin: 0 auto;
+
+
 
   &::after{
         content: '';
         position: absolute;
-        top: 100%;
+        top: 80%;
         width: 100%;
         height:50%;
         background: #333333;
-        transform-origin: left;
+        transform-origin: right;
         transform: skewY(-3deg);
         border-top: 20px solid black
 
     }
 
-@media (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 823px)  {
        
-  height: 40vh;
+  height: 40vmax;
 
+}
+
+
+@media (max-width:600px){
+
+  height: 40vmax;
 }
 
 `;
@@ -43,7 +51,7 @@ const WrapperRow = withReveal(styled.div`
 
   display: flex;
   width: 60%;
-  margin: 0 auto;
+  margin: 10vmax auto;
   font-family: "Formular";
   font-size: calc(10px + .65vw);
   
@@ -115,7 +123,7 @@ return(
               
 
         </WrapperRow>      
-      </Section>
+  </Section>
 
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import Navbar from './navbar'
+import {device} from './device'
 /* import Jump from 'react-reveal/Jump' */
 import styled from "styled-components"
 /* import arrow from '../images/arrow.svg' */
@@ -10,18 +11,7 @@ import BackgroundImage from './background'
 const StyledBackgroundImage = styled(BackgroundImage)` 
 
 
-    &::after{
-        content: '';
-        position: absolute;
-        top: 85%;
-        width: 100%;
-        height: 30%;
-        background: white;
-        transform-origin: left;
-        transform: skewY(-3deg);
-        border-top: 20px solid black; 
-
-    }
+   
 
 `; 
 
@@ -31,10 +21,35 @@ const Head = styled.section `
     display: block;
     box-sizing: border-box;
     width: 100%;
-    height: 80%;
+    height: 100%;
     position: relative;
     overflow:hidden;
     z-index: 0;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 97%;
+        width: 100%;
+        height: 20%;
+        background: white;
+        transform-origin: left;
+        transform: skewY(-3deg);
+        border-top: 20px solid black; 
+
+      @media (min-width: ${device.mobileM}) and (max-width: ${device.tablet})  {
+       
+       top: 94%;
+     
+     }
+
+     @media(max-width: ${device.mobileS})
+     {
+       top: 90%;
+     }
+   
+
+    }
     
     
 
@@ -46,7 +61,7 @@ const Content = styled.div `
 
    ${'' /*  font-size: 4vmin; */}
     color: white;
-    font-size: calc(10px + .65vw);
+    font-size: calc(16px + 1vw);
     font-weight: bold;
     margin: 0, 50%;
     position: absolute;

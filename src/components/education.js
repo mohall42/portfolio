@@ -2,6 +2,7 @@ import React from 'react'
 import withReveal from 'react-reveal/withReveal'
 import Slide from 'react-reveal/Slide'
 import styled from 'styled-components'
+import {device} from './device'
 
 
 
@@ -11,7 +12,7 @@ const Section = styled.div`
     color: white;
     position: relative;
     width: 100%;
-    height: 55vh;
+    height: 25vmax;
     font-size: calc(.5em + .65vw);
     
 
@@ -33,23 +34,17 @@ const Section = styled.div`
         padding-top:1%;
     }
 
-    @media(max-width: 1440px) {
+    @media(max-width: ${device.laptopL}) {
      
-        height: 40vh;
+        height: 30vmax;
 
     }
-    @media(max-width: 1024px) {
-        
-        height: 35vh;
-
-    }
-    @media(max-width: 768px) {
-        
-        height: 30vh;
-        margin-top: 3%;
-
-    }
-    @media (max-width: 600px) {
+    @media (min-width: ${device.mobileL}) and (max-width: ${device.tablet})  {
+       
+       height: 40vmax;
+     
+     }
+    @media (max-width: ${device.tablet}) {
 
        .title{
            margin-top: 6%;
@@ -95,6 +90,7 @@ const FlexContainer = styled.div`
 
     display: flex;
    justify-content: space-between;
+   margin: 5% 0;
     
 `;
 

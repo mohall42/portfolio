@@ -3,6 +3,7 @@ import {Link } from 'gatsby'
 import logo from '../images/logo.svg'
 import styled from 'styled-components'
 import Flash from 'react-reveal/Flash'
+import {device} from './device'
 
 
 
@@ -18,16 +19,16 @@ const Icon = styled.img`
     margin-left: 5%;
 
 
-@media only screen and (max-width: 600px){ 
+    @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}){ 
 
-       display: block;
-        margin-top: 4%;
-        margin-left: auto;
-        margin-right: auto;
-        height: 55%;
-        width: 55%;
- 
-} 
+        display: block;
+            margin-top: 4%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 55%;
+            width: 55%;
+    
+    } 
 `;
 
 const NavBar = () => {
