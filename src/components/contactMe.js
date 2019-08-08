@@ -55,11 +55,11 @@ const Contact = () => {
                 </Wobble>
                
                 
-                <a  href= "https://dribbble.com/"><img className='symbol' src = {DribbbleLogo} alt=" "></img></a>
+                <a  href= "https://dribbble.com/"><img className='symbol' src = {DribbbleLogo} alt="Dribble"></img></a>
             
-                <a  href = "https://github.com/mohall42"><img className='symbol' src = {GitHubLogo} alt=" "></img></a>
+                <a  href = "https://github.com/mohall42"><img className='symbol' src = {GitHubLogo} alt="Github"></img></a>
             
-                <a href = "/"><img className='symbol'  src = {Resume} alt=" "></img></a>
+                <a href = "https://docs.google.com/document/d/1FPnOyxBV3ryjA6fSJ7AwvpjL3AuvCEIL0vALuRL8U04/export?format=pdf"><img className='symbol'  src = {Resume} alt="Resume"></img></a>
                 
                 <img className='logo'  src = {logo} alt=" "></img>
                 

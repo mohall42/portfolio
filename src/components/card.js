@@ -21,7 +21,7 @@ render(){
           opacity: 0.8;
           border-radius: 8px;
           cursor: pointer;
-          transform: rotate(5deg) scale(1.2);
+          transform: scale(1.2);
       }
       
     @media screen and (max-width: ${device.mobileL}) {
@@ -72,7 +72,8 @@ render(){
     const BodyContainer = styled.div ` 
 
       margin-left: 1%;
-      font-size: 16px;
+      font-size: calc(10px + .65vw);
+
       color: white;
      
 

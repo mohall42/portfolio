@@ -3,7 +3,7 @@ import withReveal from 'react-reveal/withReveal'
 import Slide from 'react-reveal/Slide'
 import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
-
+import {device} from './device'
 
 
 
@@ -14,7 +14,7 @@ const Section = styled.section`
   box-sizing: border-box;
   position: relative;
   width: 100%;
-  height: 25vmax;
+  height: 27vmax;
   margin: 0 auto;
 
 
@@ -32,7 +32,13 @@ const Section = styled.section`
 
     }
 
-@media (min-width: 425px) and (max-width: 823px)  {
+@media (max-width: ${device.laptop} ){
+  height: 30vmax;
+}
+
+
+
+@media (min-width: ${device.mobileL}) and (max-width: ${device.tablet})  {
        
   height: 40vmax;
 

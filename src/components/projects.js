@@ -18,7 +18,7 @@ const Box = styled.section `
 
 const FlexRow = withReveal(styled.div` 
  
-  width: 100%;
+  width: 95%;
   height: 50%;
   display: flex;
   margin: 5% auto;

@@ -69,6 +69,18 @@ const Content = styled.div `
     left: 50%;
     margin-right: -50%; 
     transform: translate(-50%, -50%);
+    
+
+    h1{
+      font-style: italic;
+      margin-bottom: 3%;
+    }
+
+    @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}){
+      margin-left: 2%;
+
+
+    }
 
    
 
