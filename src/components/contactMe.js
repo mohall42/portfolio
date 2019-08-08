@@ -19,7 +19,7 @@ const Flex = styled.div`
     justify-content: space-around;
 
     h3{
-        font-size: 2vmin;
+        font-size: 2.5vmin;
     }
 
     
@@ -37,8 +37,8 @@ const Flex = styled.div`
     }
 
     .logo{
-        height: calc(30px + 5vw);
-        width:  calc(30px + 5vw);
+        height: calc(30px + 7vw);
+        width:  calc(30px + 7vw);
     }
 
     

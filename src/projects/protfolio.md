@@ -6,4 +6,4 @@ featuredImage: ./images/portfolio.jpg
 link: https://github.com/mohall42/portfolio
 ---
 
-I wrote this in the post 
+Portfolio website built using Gatsby.js. 
