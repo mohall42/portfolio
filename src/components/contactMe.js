@@ -37,8 +37,8 @@ const Flex = styled.div`
     }
 
     .logo{
-        height: calc(30px + 7vw);
-        width:  calc(30px + 7vw);
+        height: calc(30px + 10vw);
+        width:  calc(30px + 10vw);
     }
 
     

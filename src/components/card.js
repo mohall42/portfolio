@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import logo from '../images/git.svg'
-
+import {device} from './device'
 
 class Card extends Component {
 
@@ -24,7 +24,7 @@ render(){
           transform: rotate(5deg) scale(1.2);
       }
       
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: ${device.mobileL}) {
     width: 100%;
    }
 

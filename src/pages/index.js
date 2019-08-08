@@ -16,7 +16,10 @@ const Index = () => {
       
        
         <div className = {siteStyle}>
-        <Helmet title="Michaels-Portfolio" />
+        <Helmet title="Michaels-Portfolio">
+          <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet" />
+
+        </Helmet>
           <Header />
           <About />
           <Education />
