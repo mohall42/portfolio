@@ -122,7 +122,7 @@ const Header = () => {
        
         
         <Head>
-            <StyledBackgroundImage tag="section" fluid={data.file.childImageSharp.fluid} height="100vh" > 
+            <StyledBackgroundImage tag="section" title="header" fluid={data.file.childImageSharp.fluid} height="100vh" > 
 
             <Navbar/>
             

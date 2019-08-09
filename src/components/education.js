@@ -64,11 +64,11 @@ const Container = withReveal(styled.div`
         border-bottom: 1px solid white;
     }
 
-    @media(max-width: 1440px) {
+    @media(max-width: ${device.laptopL}) {
        
         width: 60%;
     }
-    @media(max-width: 1024px) {
+    @media(max-width: ${device.laptop}) {
         
 
     }
@@ -77,7 +77,7 @@ const Container = withReveal(styled.div`
         
 
     }
-    @media (max-width: 600px) {
+    @media (max-width: ${device.mobileAll}) {
 
         width: 90%;
 
