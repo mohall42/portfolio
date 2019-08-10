@@ -130,7 +130,7 @@ const Header = () => {
             <Content>
                
                 
-               <h1>Hello, Michael Hall </h1>
+               <h1>Hello, I'm Michael Hall </h1>
                <p>A newly graduated Computer Science major</p>
                
              
