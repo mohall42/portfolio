@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Wobble from 'react-reveal/Wobble'
-import DribbbleLogo from '../images/dribbble.svg'
+import LinkedInLogo from '../images/linkedIn.svg'
 import GitHubLogo from '../images/git.svg'
 import Resume from '../images/resume.svg'
 import logo from '../images/logo.svg'
@@ -55,7 +55,7 @@ const Contact = () => {
                 </Wobble>
                
                 
-                <a  href= "https://dribbble.com/"><img className='symbol' src = {DribbbleLogo} alt="Dribble"></img></a>
+                <a  href= "https://linkedin.com/in/mohall42"><img className='symbol' src = {LinkedInLogo} alt="Dribble"></img></a>
             
                 <a  href = "https://github.com/mohall42"><img className='symbol' src = {GitHubLogo} alt="Github"></img></a>
             
