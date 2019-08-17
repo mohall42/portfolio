@@ -16,13 +16,13 @@ render(){
     Img{
       border-radius: 8px;
     }
-    &:hover Img {
+ ${'' /*    &:hover Img {
           
           opacity: 0.8;
           border-radius: 8px;
           cursor: pointer;
           transform: scale(1.2);
-      }
+      } */}
       
     @media screen and (max-width: ${device.mobileL}) {
     width: 100%;
