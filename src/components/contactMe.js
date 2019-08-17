@@ -51,7 +51,7 @@ const Contact = () => {
             <Flex>
 
                 <Wobble>
-                     <h3>Get in touch with me </h3>
+                     <h3>Contact Me</h3>
                 </Wobble>
                
                 
@@ -59,7 +59,7 @@ const Contact = () => {
             
                 <a  href = "https://github.com/mohall42"><img className='symbol' src = {GitHubLogo} alt="Github"></img></a>
             
-                <a href = "https://docs.google.com/document/d/1FPnOyxBV3ryjA6fSJ7AwvpjL3AuvCEIL0vALuRL8U04/export?format=pdf"><img className='symbol'  src = {Resume} alt="Resume"></img></a>
+                <a href = "https://docs.google.com/document/d/1W7Yxv-U-xm2E0lbkTrnDFpMvx0kHBjcMXvKzzgpUGwg/export?format=pdf"><img className='symbol'  src = {Resume} alt="Resume"></img></a>
                 
                 <img className='logo'  src = {logo} alt=" "></img>
                 
