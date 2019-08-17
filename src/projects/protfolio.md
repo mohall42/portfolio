@@ -2,7 +2,7 @@
 
 title: Project
 name: Portfolio
-featuredImage: ./images/portfolio.jpg
+featuredImage: ./images/portfolio.png
 link: https://github.com/mohall42/portfolio
 ---
 
