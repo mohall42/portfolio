@@ -1,9 +1,9 @@
 import React from 'react'
 import withReveal from 'react-reveal/withReveal'
 import Slide from 'react-reveal/Slide'
-import {graphql, useStaticQuery} from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import {device} from './device'
+import { device } from './device'
 
 
 
@@ -19,7 +19,7 @@ const Section = styled.section`
 
 
 
-  &::after{
+${'' /*   &::after{
         content: '';
         position: absolute;
         top: 80%;
@@ -30,7 +30,7 @@ const Section = styled.section`
         transform: skewY(-3deg);
         border-top: 20px solid black
 
-    }
+    } */}
 
 @media (max-width: ${device.laptop} ){
   height: 30vmax;
@@ -105,7 +105,7 @@ const WrapperRow = withReveal(styled.div`
 `, <Slide top />);
 
 const About = () => {
-  const data = useStaticQuery( graphql `
+  const data = useStaticQuery(graphql`
   query {
     markdownRemark(frontmatter:{title: { eq: "About Me"} }){
         html
@@ -115,24 +115,24 @@ const About = () => {
    
 `);
 
-return(
-  
-  <Section>
-        <WrapperRow>
+  return (
 
-              <div className = "column title">
-                <h2>About Me</h2>
-              </div>
-  
-              <div className = "column body" dangerouslySetInnerHTML={{__html: data.markdownRemark.html}} />
-              
+    <Section>
+      <WrapperRow>
 
-        </WrapperRow>      
-  </Section>
+        <div className="column title">
+          <h2>About Me</h2>
+        </div>
+
+        <div className="column body" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 
 
+      </WrapperRow>
+    </Section>
 
-)
+
+
+  )
 
 
 }

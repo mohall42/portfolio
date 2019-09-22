@@ -9,7 +9,7 @@ const Parent = styled.div`
 `;
 
 const FakeBgImage = styled(Img)`
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,6 +19,7 @@ const FakeBgImage = styled(Img)`
   & > img {
     object-fit: cover !important;
     object-position: 0% 0% !important;
+  
     font-family: "object-fit: cover !important; object-position: 0% 0% !important;";
   }
 
@@ -43,16 +44,16 @@ const BgImage = ({
   children,
   className
 }) => (
-  <Parent bc={overlayColor}>
-    <FakeBgImage
-      fluid={fluid}
-      title={title}
-      height={height}
-      mobileHeight={mobileHeight}
-    />
-    <Content className={className}>{children}</Content>
-  </Parent>
-);
+    <Parent bc={overlayColor}>
+      <FakeBgImage
+        fluid={fluid}
+        title={title}
+        height={height}
+        mobileHeight={mobileHeight}
+      />
+      <Content className={className}>{children}</Content>
+    </Parent>
+  );
 BgImage.propTypes = {
   fluid: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,

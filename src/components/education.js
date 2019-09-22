@@ -2,31 +2,21 @@ import React from 'react'
 import withReveal from 'react-reveal/withReveal'
 import Slide from 'react-reveal/Slide'
 import styled from 'styled-components'
-import {device} from './device'
+import { device } from './device'
 
 
 
 const Section = styled.div` 
 
-    background: #333333;
+    background: #000000;
     color: white;
+    max-width: 80%;
+    min-height: 100vh;
     position: relative;
-    width: 100%;
-    height: 25vmax;
     font-size: calc(.5em + .65vw);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     
 
-    &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height:25%;
-        top: 100%;
-        background: #333333;
-        transform-origin: bottom right;
-        transform: skewY(3deg);
-        border-bottom: 20px solid black;
-    }
 
     .title{
         margin: 2%;
@@ -34,16 +24,6 @@ const Section = styled.div`
         padding-top:1%;
     }
 
-    @media(max-width: ${device.laptopL}) {
-     
-        height: 30vmax;
-
-    }
-    @media (min-width: ${device.mobileL}) and (max-width: ${device.tablet})  {
-       
-       height: 40vmax;
-     
-     }
     @media (max-width: ${device.tablet}) {
 
        .title{
@@ -57,7 +37,7 @@ const Section = styled.div`
 
 const Container = withReveal(styled.div` 
 
-    width:50%;
+    max-width:50%;
     margin: 1% auto;
     
     .section{
@@ -97,18 +77,18 @@ const FlexContainer = styled.div`
 const Experience = () => {
 
 
-    return(
+    return (
 
         <Section>
-        <h2 className="title">Education</h2>
+
             <Container>
-                
+
                 <div className='section'>
                     <FlexContainer>
                         <h3>Tennessesse Technological University</h3>
                         <p>2016 - 2019</p>
                     </FlexContainer>
-                    
+
                     <p>B.S. in Computer Science</p>
                 </div>
                 <div className='section'>
@@ -116,7 +96,7 @@ const Experience = () => {
                         <h3>Pellissippi State Community College</h3>
                         <p>2013 - 2016</p>
                     </FlexContainer>
-                    
+
                     <p>Associate of Science</p>
                 </div>
 
