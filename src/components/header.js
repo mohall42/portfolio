@@ -1,96 +1,107 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { getAboutData } from '../hooks/about'
 import { device } from './device'
 import styled from "styled-components"
-/* import arrow from '../images/arrow.svg' */
 import BackgroundImage from './background'
 
 
-const StyledBackgroundImage = styled(BackgroundImage)` 
-
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 96.67%, #FFFFFF 100%);
- 
-   
-
-`;
 
 
 
 const Content = styled.div` 
 
-   ${'' /*  font-size: 4vmin; */}
-    color: white;
-    font-size: calc(16px + 1vw);
-    position: absolute;
-    font-weight: bold;
-    margin: 0, 50%;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%; 
-    transform: translate(-50%, -50%);
-    
+h1{position: absolute;
+width: 318px;
+height: 341px;
+left: 10%;
+top: 10%;
 
-    h1, p{
-     ${'' /*  position: absolute; */}
-      font-style: italic;
-      margin-bottom: 3%;
-      text-shadow: 0 0 10px #000;
-    }
+font-family: Oswald;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 107px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
 
-    @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}){
-      margin-left: 2%;
+color: #FFFFFF;
+}
+
+p{
+position: absolute;
+width: 328px;
+height: 214px;
+right: 10%;
+bottom: 20%;
+
+font-family: Oswald;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 53px;
+text-align: right;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
 
 
-    }
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}){
+    margin-left: 2%;
+
+
+  } 
 
    
 
 `;
 
+const AboutCard = styled.div`
 
-const Header = () => {
+position: absolute;
+width: 524px;
+height: 650px;
+left: 106px;
+top: 957px;
 
-  const data = useStaticQuery(graphql` 
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 
-    query {
-      file(relativePath: { eq: "images/background.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 4160){
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-    
-    `)
+
+
+  `;
+
+
+const Header = ({ data }) => {
+
+  const { background } = getAboutData();
 
   return (
 
 
 
-    <StyledBackgroundImage tag="section" title="header" fluid={data.file.childImageSharp.fluid} height="100vh" >
-
-
-
+    <BackgroundImage tag="section" title="header" height="100vh" fluid={background} >
 
       <Content>
 
 
-        <h1>Hello, I'm Michael Hall </h1>
+        <h1>Michael Odane Hall </h1>
         <p>A newly graduated Computer Science major</p>
 
 
       </Content>
 
+      <AboutCard>
+        <h3>about me</h3>
 
 
+      </AboutCard>
 
-
-
-    </StyledBackgroundImage>
+    </BackgroundImage>
 
 
   )
 }
 
-export default Header
+export default Header;
