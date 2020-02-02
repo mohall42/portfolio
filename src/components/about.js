@@ -104,16 +104,8 @@ const WrapperRow = withReveal(styled.div`
 
 `, <Slide top />);
 
-const About = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    markdownRemark(frontmatter:{title: { eq: "About Me"} }){
-        html
-       
-     }
-   }
-   
-`);
+export default About = ({ data }) => {
+
 
   return (
 
@@ -138,4 +130,11 @@ const About = () => {
 }
 
 
-export default About
+export const query = graphql`
+query {
+  about: markdownRemark(frontmatter:{title: { eq: "About Me"} }){
+  html
+  
+  }
+}
+`

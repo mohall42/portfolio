@@ -1,10 +1,7 @@
 import React from 'react'
-import { getAboutData } from '../hooks/about'
 import { device } from './device'
 import styled from "styled-components"
 import BackgroundImage from './background'
-
-
 
 
 
@@ -54,8 +51,6 @@ color: #FFFFFF;
 
   } 
 
-   
-
 `;
 
 const AboutCard = styled.div`
@@ -65,27 +60,20 @@ width: 524px;
 height: 650px;
 left: 106px;
 top: 957px;
-
 box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-
-
 
   `;
 
+const Header = () => {
 
-const Header = ({ data }) => {
 
-  const { background } = getAboutData();
 
   return (
 
 
-
-    <BackgroundImage tag="section" title="header" height="100vh" fluid={background} >
+    <BackgroundImage>
 
       <Content>
-
-
         <h1>Michael Odane Hall </h1>
         <p>A newly graduated Computer Science major</p>
 
@@ -99,9 +87,12 @@ const Header = ({ data }) => {
       </AboutCard>
 
     </BackgroundImage>
-
-
   )
+
+
+
 }
 
-export default Header;
+export default Header
+
+
