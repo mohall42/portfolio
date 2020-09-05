@@ -5,46 +5,28 @@ import styled from "styled-components"
 /* import arrow from '../images/arrow.svg' */
 import BackgroundImage from './background'
 
-
-const StyledBackgroundImage = styled(BackgroundImage)` 
-
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 96.67%, #FFFFFF 100%);
- 
-   
-
-`;
-
-
-
 const Content = styled.div` 
+  position: absolute;
+  width: 318px;
+  height: 341px;
+  left: 111px;
+  top: 138px;
 
-   ${'' /*  font-size: 4vmin; */}
-    color: white;
-    font-size: calc(16px + 1vw);
-    position: absolute;
-    font-weight: bold;
-    margin: 0, 50%;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%; 
-    transform: translate(-50%, -50%);
-    
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 107px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
 
-    h1, p{
-     ${'' /*  position: absolute; */}
-      font-style: italic;
-      margin-bottom: 3%;
-      text-shadow: 0 0 10px #000;
-    }
-
-    @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}){
-      margin-left: 2%;
-
-
-    }
-
-   
-
+  border: 3px solid #000000;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}){
+    margin-left: 2%;
+  }
 `;
 
 
@@ -61,35 +43,14 @@ const Header = () => {
         }
       }
     }
-    
     `)
 
   return (
-
-
-
-    <StyledBackgroundImage tag="section" title="header" fluid={data.file.childImageSharp.fluid} height="100vh" >
-
-
-
-
+    <BackgroundImage tag="section" title="header" fluid={data.file.childImageSharp.fluid} height="100vh" >
       <Content>
-
-
-        <h1>Hello, I'm Michael Hall </h1>
-        <p>A newly graduated Computer Science major</p>
-
-
+        <h1>Michael Odane Hall</h1>
       </Content>
-
-
-
-
-
-
-    </StyledBackgroundImage>
-
-
+    </BackgroundImage>
   )
 }
 

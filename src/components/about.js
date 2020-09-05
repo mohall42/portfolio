@@ -17,90 +17,34 @@ const Section = styled.section`
   height: 27vmax;
   margin: 0 auto;
 
+  @media (max-width: ${device.laptop} ){
+    height: 30vmax;
+  }
 
+  @media (min-width: ${device.mobileL}) and (max-width: ${device.tablet})  {     
+    height: 40vmax;
+  }
 
-${'' /*   &::after{
-        content: '';
-        position: absolute;
-        top: 80%;
-        width: 100%;
-        height:50%;
-        background: #333333;
-        transform-origin: right;
-        transform: skewY(-3deg);
-        border-top: 20px solid black
-
-    } */}
-
-@media (max-width: ${device.laptop} ){
-  height: 30vmax;
-}
-
-
-
-@media (min-width: ${device.mobileL}) and (max-width: ${device.tablet})  {
-       
-  height: 40vmax;
-
-}
-
-
-@media (max-width:600px){
-
-  height: 40vmax;
-}
+  @media (max-width:600px){
+    height: 40vmax;
+  }
 
 `;
 
 
-const WrapperRow = withReveal(styled.div` 
-
-  display: flex;
-  width: 60%;
-  margin: 10vmax auto;
-  font-size: calc(10px + .65vw);
+const Card = withReveal(styled.div` 
+  possition: absolute;
+  width: 524px;
+  height: 650px;
   
-
-.column{
-  flex: 50%;
-  
-}
-
-.title{
-
-  border-right: 1px solid #000000;
-
-}
-
-.body{
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
   position: relative;
-  left: 2%;
-
-}
-
-
-@media(max-width: 1440px) {
-    width: 80%;
-
-}
-@media(max-width: 1024px) {
-    width: 80%;
-
-}
-@media(max-width: 768px) {
-  width: 90%;
-}
-
-@media (max-width: 600px) {
-  flex-direction: column;
-  .title{
-    border-right: none;
-  }
-  
-  .column {
-    width: 100%;
-  }
-}
+  width: 300px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
 `, <Slide top />);
 
@@ -109,32 +53,19 @@ const About = () => {
   query {
     markdownRemark(frontmatter:{title: { eq: "About Me"} }){
         html
-       
      }
    }
    
 `);
 
   return (
-
     <Section>
-      <WrapperRow>
-
-        <div className="column title">
-          <h2>About Me</h2>
-        </div>
-
+      <Card>
+        <h1>About Me</h1>
         <div className="column body" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-
-
-      </WrapperRow>
+      </Card>
     </Section>
-
-
-
   )
-
-
 }
 
 
