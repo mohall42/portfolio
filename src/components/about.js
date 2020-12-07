@@ -5,16 +5,11 @@ import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { device } from './device'
 
-
-
-
-
 const Section = styled.section` 
-
   box-sizing: border-box;
   position: relative;
   width: 100%;
-  height: 27vmax;
+  height: 45vmax;
   margin: 0 auto;
 
   @media (max-width: ${device.laptop} ){
@@ -28,22 +23,19 @@ const Section = styled.section`
   @media (max-width:600px){
     height: 40vmax;
   }
-
 `;
-
-
 const Card = withReveal(styled.div` 
-  possition: absolute;
-  width: 524px;
-  height: 650px;
+  position: absolute;
+  width: 500px !important;
+  height: 600px !important;
+  left: 0px;
+  top: -100px;
   
   background: #fff;
   border-radius: 2px;
   display: inline-block;
-  height: 300px;
   margin: 1rem;
   position: relative;
-  width: 300px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
 `, <Slide top />);
@@ -67,6 +59,5 @@ const About = () => {
     </Section>
   )
 }
-
 
 export default About

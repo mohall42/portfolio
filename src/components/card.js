@@ -11,7 +11,6 @@ render(){
     const ImageContainer = styled.div` 
     width: 100%;
     display: block;
-    
     Img{
       border-radius: 8px;
     }
@@ -73,9 +72,7 @@ render(){
               <Img fluid={image.childImageSharp.fluid} />
           </ImageContainer>
           <BodyContainer>
-
             <h3>{title}</h3>
-            
             <p>{body}</p>
             <a href={link}><img alt={title} src={logo}></img></a>
 
@@ -86,12 +83,8 @@ render(){
       )
     }
 };
-
 //PropTypes
 Card.propTypes = {
   fill: PropTypes.object.isRequired
 }
-
-
 export default Card;
-

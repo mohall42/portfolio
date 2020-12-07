@@ -1,7 +1,4 @@
-
-
 export const device = {
-    
         mobileS: '320px',
         mobileM: '375px',
         mobileL: '425px',
@@ -10,6 +7,5 @@ export const device = {
         laptop: '1024px',
         laptopL: '1440px',
         desktop: '2560px'
-      
 }
 
